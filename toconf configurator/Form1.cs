@@ -23,6 +23,7 @@ namespace toconf_configurator
             InitializeComponent();
         }
 
+        // executer au chargement du programme
         private void Form1_Load(object sender, EventArgs e)
         {
             // Pour loader les paramètres
@@ -40,6 +41,7 @@ namespace toconf_configurator
             }
         }
 
+        //bouton qui écrit la ligne pour inspection
         private void gen_Click(object sender, EventArgs e)
         {
             ext.Text = "     " + ciblename.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
@@ -48,6 +50,7 @@ namespace toconf_configurator
             Clipboard.SetText(ext.Text);
         }
 
+        // bouton quitter le programme
         private void exit_Click(object sender, EventArgs e)
         {
             // Pour enregistrer les paramétres
@@ -79,6 +82,7 @@ namespace toconf_configurator
             Application.Exit();
         }
 
+        //bouton qui génére le fichier texte
         private void button2_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
@@ -86,12 +90,14 @@ namespace toconf_configurator
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                 decs.Text + ".0" + "                      " + obscde.Text);
 
+            //monte de + 1 le nom du fichier de sortie
             var A = int.Parse(nametxt1.Text);
             var B = int.Parse(label11.Text);
             var C = A + B;
             nametxt1.Text = C.ToString();
         }
 
+        //bouton + pour monter incrémenter le fichier
         private void button1_Click(object sender, EventArgs e)
         {
             var A = int.Parse(nametxt1.Text);
@@ -101,6 +107,7 @@ namespace toconf_configurator
 
         }
 
+        //bouton - pour monter décrémenter le fichier
         private void button3_Click(object sender, EventArgs e)
         {
             var A = int.Parse(nametxt1.Text);
@@ -109,6 +116,7 @@ namespace toconf_configurator
             nametxt1.Text = C.ToString();
         }
 
+        //bouton pour recharger les paramétres
         private void charge_Click(object sender, EventArgs e)
         {
             // Pour loader les paramètres
