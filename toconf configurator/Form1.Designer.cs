@@ -74,7 +74,9 @@
             // 
             // ciblename
             // 
+            this.ciblename.AccessibleDescription = "";
             this.ciblename.Location = new System.Drawing.Point(160, 16);
+            this.ciblename.MaxLength = 7;
             this.ciblename.Name = "ciblename";
             this.ciblename.Size = new System.Drawing.Size(63, 20);
             this.ciblename.TabIndex = 1;
@@ -93,6 +95,7 @@
             // adh
             // 
             this.adh.Location = new System.Drawing.Point(198, 120);
+            this.adh.MaxLength = 2;
             this.adh.Name = "adh";
             this.adh.Size = new System.Drawing.Size(25, 20);
             this.adh.TabIndex = 3;
@@ -102,6 +105,7 @@
             // adm
             // 
             this.adm.Location = new System.Drawing.Point(229, 120);
+            this.adm.MaxLength = 2;
             this.adm.Name = "adm";
             this.adm.Size = new System.Drawing.Size(25, 20);
             this.adm.TabIndex = 4;
@@ -111,6 +115,7 @@
             // ads
             // 
             this.ads.Location = new System.Drawing.Point(260, 120);
+            this.ads.MaxLength = 2;
             this.ads.Name = "ads";
             this.ads.Size = new System.Drawing.Size(25, 20);
             this.ads.TabIndex = 5;
@@ -129,6 +134,7 @@
             // decpm
             // 
             this.decpm.Location = new System.Drawing.Point(167, 146);
+            this.decpm.MaxLength = 1;
             this.decpm.Name = "decpm";
             this.decpm.Size = new System.Drawing.Size(25, 20);
             this.decpm.TabIndex = 7;
@@ -138,6 +144,7 @@
             // dech
             // 
             this.dech.Location = new System.Drawing.Point(198, 146);
+            this.dech.MaxLength = 2;
             this.dech.Name = "dech";
             this.dech.Size = new System.Drawing.Size(25, 20);
             this.dech.TabIndex = 8;
@@ -147,6 +154,7 @@
             // decm
             // 
             this.decm.Location = new System.Drawing.Point(229, 146);
+            this.decm.MaxLength = 2;
             this.decm.Name = "decm";
             this.decm.Size = new System.Drawing.Size(25, 20);
             this.decm.TabIndex = 9;
@@ -156,6 +164,7 @@
             // decs
             // 
             this.decs.Location = new System.Drawing.Point(260, 146);
+            this.decs.MaxLength = 2;
             this.decs.Name = "decs";
             this.decs.Size = new System.Drawing.Size(25, 20);
             this.decs.TabIndex = 10;
@@ -174,6 +183,7 @@
             // year
             // 
             this.year.Location = new System.Drawing.Point(160, 42);
+            this.year.MaxLength = 4;
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(63, 20);
             this.year.TabIndex = 12;
@@ -201,6 +211,7 @@
             // mount
             // 
             this.mount.Location = new System.Drawing.Point(160, 68);
+            this.mount.MaxLength = 2;
             this.mount.Name = "mount";
             this.mount.Size = new System.Drawing.Size(63, 20);
             this.mount.TabIndex = 15;
@@ -210,6 +221,7 @@
             // day
             // 
             this.day.Location = new System.Drawing.Point(160, 94);
+            this.day.MaxLength = 2;
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(63, 20);
             this.day.TabIndex = 16;
@@ -237,6 +249,7 @@
             // obscde
             // 
             this.obscde.Location = new System.Drawing.Point(160, 172);
+            this.obscde.MaxLength = 3;
             this.obscde.Name = "obscde";
             this.obscde.Size = new System.Drawing.Size(63, 20);
             this.obscde.TabIndex = 19;
