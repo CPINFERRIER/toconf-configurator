@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+
 
 namespace toconf_configurator
 {
@@ -20,6 +23,19 @@ namespace toconf_configurator
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Pour loader les paramètres
+            var mfileName = "toconf.dll";
+            if (File.Exists(mfileName))
+            {
+                using (var file = new StreamReader(mfileName))
+                {
+                    empl.Text = file.ReadLine();
+                }
+            }
+        }
+
         private void gen_Click(object sender, EventArgs e)
         {
             ext.Text = "     " + ciblename.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
@@ -30,7 +46,25 @@ namespace toconf_configurator
 
         private void exit_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            // Pour enregistrer les paramétres
+            var mfileName = "toconf.dll";
+            if (File.Exists(mfileName))
+            {
+                File.Delete(mfileName);
+                using (var file = new StreamWriter(mfileName))
+                {
+                    file.WriteLine(empl.Text);
+                }
+            }
+            else
+            {
+                using (var file = new StreamWriter(mfileName))
+                {
+                    file.WriteLine(empl.Text);
+                }
+            }
+            // Pour quitter le programme
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,6 +95,19 @@ namespace toconf_configurator
             var B = int.Parse(label11.Text);
             var C = A - B;
             nametxt1.Text = C.ToString();
+        }
+
+        private void charge_Click(object sender, EventArgs e)
+        {
+            // Pour loader les paramètres
+            var mfileName = "toconf.dll";
+            if (File.Exists(mfileName))
+            {
+                using (var file = new StreamReader(mfileName))
+                {
+                    empl.Text = file.ReadLine();
+                }
+            }
         }
     }
 }

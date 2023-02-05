@@ -61,6 +61,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.charge = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -266,7 +267,7 @@
             // 
             // gen
             // 
-            this.gen.Location = new System.Drawing.Point(69, 314);
+            this.gen.Location = new System.Drawing.Point(125, 314);
             this.gen.Name = "gen";
             this.gen.Size = new System.Drawing.Size(94, 23);
             this.gen.TabIndex = 21;
@@ -276,7 +277,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(269, 314);
+            this.exit.Location = new System.Drawing.Point(325, 314);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(94, 23);
             this.exit.TabIndex = 22;
@@ -286,7 +287,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(169, 314);
+            this.button2.Location = new System.Drawing.Point(225, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 23);
             this.button2.TabIndex = 24;
@@ -370,11 +371,22 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // charge
+            // 
+            this.charge.Location = new System.Drawing.Point(13, 314);
+            this.charge.Name = "charge";
+            this.charge.Size = new System.Drawing.Size(106, 23);
+            this.charge.TabIndex = 33;
+            this.charge.Text = "Charger réglages";
+            this.charge.UseVisualStyleBackColor = true;
+            this.charge.Click += new System.EventHandler(this.charge_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 349);
+            this.Controls.Add(this.charge);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
@@ -410,6 +422,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "toconf Generator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,6 +462,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button charge;
     }
 }
 
