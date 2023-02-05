@@ -33,6 +33,9 @@ namespace toconf_configurator
                 {
                     empl.Text = file.ReadLine();
                     obscde.Text = file.ReadLine();
+                    mount.Text = file.ReadLine();
+                    day.Text = file.ReadLine();
+                    year.Text = file.ReadLine();
                 }
             }
         }
@@ -56,6 +59,9 @@ namespace toconf_configurator
                 {
                     file.WriteLine(empl.Text);
                     file.WriteLine(obscde.Text);
+                    file.WriteLine(mount.Text);
+                    file.WriteLine(day.Text);
+                    file.WriteLine(year.Text);
                 }
             }
             else
@@ -64,6 +70,9 @@ namespace toconf_configurator
                 {
                     file.WriteLine(empl.Text);
                     file.WriteLine(obscde.Text);
+                    file.WriteLine(mount.Text);
+                    file.WriteLine(day.Text);
+                    file.WriteLine(year.Text);
                 }
             }
             // Pour quitter le programme
@@ -110,6 +119,9 @@ namespace toconf_configurator
                 {
                     empl.Text = file.ReadLine();
                     obscde.Text = file.ReadLine();
+                    mount.Text = file.ReadLine();
+                    day.Text = file.ReadLine();
+                    year.Text = file.ReadLine();
                 }
             }
         }

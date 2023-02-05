@@ -83,6 +83,7 @@
             this.ciblename.TabIndex = 1;
             this.ciblename.Text = "CH00001";
             this.ciblename.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ciblename.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // label2
             // 
@@ -102,6 +103,7 @@
             this.adh.TabIndex = 3;
             this.adh.Text = "00";
             this.adh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.adh.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // adm
             // 
@@ -112,6 +114,7 @@
             this.adm.TabIndex = 4;
             this.adm.Text = "00";
             this.adm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.adm.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // ads
             // 
@@ -122,6 +125,7 @@
             this.ads.TabIndex = 5;
             this.ads.Text = "00";
             this.ads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ads.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // label3
             // 
@@ -141,6 +145,7 @@
             this.decpm.TabIndex = 7;
             this.decpm.Text = "+";
             this.decpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.decpm.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // dech
             // 
@@ -151,6 +156,7 @@
             this.dech.TabIndex = 8;
             this.dech.Text = "00";
             this.dech.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dech.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // decm
             // 
@@ -161,6 +167,7 @@
             this.decm.TabIndex = 9;
             this.decm.Text = "00";
             this.decm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.decm.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // decs
             // 
@@ -171,6 +178,7 @@
             this.decs.TabIndex = 10;
             this.decs.Text = "00";
             this.decs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.decs.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // label4
             // 
@@ -190,15 +198,16 @@
             this.year.TabIndex = 12;
             this.year.Text = "2023";
             this.year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.year.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(229, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 13);
+            this.label5.Size = new System.Drawing.Size(121, 13);
             this.label5.TabIndex = 13;
-            this.label5.Text = "(maximum 7 caractéres)";
+            this.label5.Text = "(7 caractéres obigatoire)";
             // 
             // label6
             // 
@@ -218,6 +227,7 @@
             this.mount.TabIndex = 15;
             this.mount.Text = "01";
             this.mount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mount.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // day
             // 
@@ -228,6 +238,7 @@
             this.day.TabIndex = 16;
             this.day.Text = "01";
             this.day.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.day.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // label7
             // 
@@ -256,6 +267,7 @@
             this.obscde.TabIndex = 19;
             this.obscde.Text = "M10";
             this.obscde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.obscde.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // ext
             // 
@@ -312,6 +324,7 @@
             this.nametxt.TabIndex = 26;
             this.nametxt.Text = "toconf";
             this.nametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nametxt.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // empl
             // 
@@ -338,6 +351,7 @@
             this.nametxt1.TabIndex = 29;
             this.nametxt1.Text = "1";
             this.nametxt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nametxt1.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // button1
             // 
