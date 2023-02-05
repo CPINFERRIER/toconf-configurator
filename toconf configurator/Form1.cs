@@ -32,6 +32,7 @@ namespace toconf_configurator
                 using (var file = new StreamReader(mfileName))
                 {
                     empl.Text = file.ReadLine();
+                    obscde.Text = file.ReadLine();
                 }
             }
         }
@@ -54,6 +55,7 @@ namespace toconf_configurator
                 using (var file = new StreamWriter(mfileName))
                 {
                     file.WriteLine(empl.Text);
+                    file.WriteLine(obscde.Text);
                 }
             }
             else
@@ -61,6 +63,7 @@ namespace toconf_configurator
                 using (var file = new StreamWriter(mfileName))
                 {
                     file.WriteLine(empl.Text);
+                    file.WriteLine(obscde.Text);
                 }
             }
             // Pour quitter le programme
@@ -106,6 +109,7 @@ namespace toconf_configurator
                 using (var file = new StreamReader(mfileName))
                 {
                     empl.Text = file.ReadLine();
+                    obscde.Text = file.ReadLine();
                 }
             }
         }
