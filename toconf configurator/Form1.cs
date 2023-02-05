@@ -27,7 +27,7 @@ namespace toconf_configurator
         private void Form1_Load(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            var mfileName = "toconf.dll";
+            var mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
@@ -54,7 +54,7 @@ namespace toconf_configurator
         private void exit_Click(object sender, EventArgs e)
         {
             // Pour enregistrer les paramétres
-            var mfileName = "toconf.dll";
+            var mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 File.Delete(mfileName);
@@ -120,7 +120,7 @@ namespace toconf_configurator
         private void charge_Click(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            var mfileName = "toconf.dll";
+            var mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
