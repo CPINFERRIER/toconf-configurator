@@ -170,7 +170,6 @@
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Année";
-            this.label4.Visible = false;
             // 
             // year
             // 
@@ -178,9 +177,8 @@
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(63, 20);
             this.year.TabIndex = 12;
-            this.year.Text = "2021";
+            this.year.Text = "2023";
             this.year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.year.Visible = false;
             // 
             // label5
             // 
