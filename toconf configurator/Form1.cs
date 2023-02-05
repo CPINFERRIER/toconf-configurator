@@ -27,7 +27,7 @@ namespace toconf_configurator
         private void Form1_Load(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            var mfileName = "toconf.txt";
+            string mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
@@ -54,7 +54,7 @@ namespace toconf_configurator
         private void exit_Click(object sender, EventArgs e)
         {
             // Pour enregistrer les paramétres
-            var mfileName = "toconf.txt";
+            string mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 File.Delete(mfileName);
@@ -91,28 +91,28 @@ namespace toconf_configurator
                 decs.Text + ".0" + "                      " + obscde.Text);
 
             //monte de + 1 le nom du fichier de sortie
-            var A = int.Parse(nametxt1.Text);
-            var B = int.Parse(label11.Text);
-            var C = A + B;
+            int A = int.Parse(nametxt1.Text);
+            int B = int.Parse(label11.Text);
+            int C = A + B;
             nametxt1.Text = C.ToString();
         }
 
         //bouton + pour monter incrémenter le fichier
         private void up_Click(object sender, EventArgs e)
         {
-            var A = int.Parse(nametxt1.Text);
-            var B = int.Parse(label11.Text);
-            var C = A + B;
+            int A = int.Parse(nametxt1.Text);
+            int B = int.Parse(label11.Text);
+            int C = A + B;
             nametxt1.Text = C.ToString();
 
         }
 
-        //bouton - pour monter décrémenter le fichier
+        //bouton - pour décrémenter le fichier
         private void down_Click(object sender, EventArgs e)
         {
-            var A = int.Parse(nametxt1.Text);
-            var B = int.Parse(label11.Text);
-            var C = A - B;
+            int A = int.Parse(nametxt1.Text);
+            int B = int.Parse(label11.Text);
+            int C = A - B;
             nametxt1.Text = C.ToString();
         }
 
@@ -120,7 +120,7 @@ namespace toconf_configurator
         private void charge_Click(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            var mfileName = "toconf.txt";
+            string mfileName = "toconf.txt";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
