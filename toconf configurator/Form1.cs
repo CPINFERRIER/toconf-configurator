@@ -37,6 +37,7 @@ namespace toconf_configurator
                     mount.Text = file.ReadLine();
                     day.Text = file.ReadLine();
                     year.Text = file.ReadLine();
+                    nametxt.Text = file.ReadLine();
                 }
             }
         }
@@ -65,6 +66,7 @@ namespace toconf_configurator
                     file.WriteLine(mount.Text);
                     file.WriteLine(day.Text);
                     file.WriteLine(year.Text);
+                    file.WriteLine(nametxt.Text);
                 }
             }
             else
@@ -76,6 +78,7 @@ namespace toconf_configurator
                     file.WriteLine(mount.Text);
                     file.WriteLine(day.Text);
                     file.WriteLine(year.Text);
+                    file.WriteLine(nametxt.Text);
                 }
             }
             // Pour quitter le programme
@@ -130,6 +133,7 @@ namespace toconf_configurator
                     mount.Text = file.ReadLine();
                     day.Text = file.ReadLine();
                     year.Text = file.ReadLine();
+                    nametxt.Text = file.ReadLine();
                 }
             }
         }
