@@ -83,7 +83,7 @@ namespace toconf_configurator
         }
 
         //bouton qui génére le fichier texte
-        private void button2_Click(object sender, EventArgs e)
+        private void genfi_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
             File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
@@ -98,7 +98,7 @@ namespace toconf_configurator
         }
 
         //bouton + pour monter incrémenter le fichier
-        private void button1_Click(object sender, EventArgs e)
+        private void up_Click(object sender, EventArgs e)
         {
             var A = int.Parse(nametxt1.Text);
             var B = int.Parse(label11.Text);
@@ -108,7 +108,7 @@ namespace toconf_configurator
         }
 
         //bouton - pour monter décrémenter le fichier
-        private void button3_Click(object sender, EventArgs e)
+        private void down_Click(object sender, EventArgs e)
         {
             var A = int.Parse(nametxt1.Text);
             var B = int.Parse(label11.Text);
