@@ -100,7 +100,7 @@
             this.adh.MaxLength = 2;
             this.adh.Name = "adh";
             this.adh.Size = new System.Drawing.Size(25, 20);
-            this.adh.TabIndex = 3;
+            this.adh.TabIndex = 5;
             this.adh.Text = "00";
             this.adh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.adh.TextChanged += new System.EventHandler(this.gen_Click);
@@ -111,7 +111,7 @@
             this.adm.MaxLength = 2;
             this.adm.Name = "adm";
             this.adm.Size = new System.Drawing.Size(25, 20);
-            this.adm.TabIndex = 4;
+            this.adm.TabIndex = 6;
             this.adm.Text = "00";
             this.adm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.adm.TextChanged += new System.EventHandler(this.gen_Click);
@@ -122,7 +122,7 @@
             this.ads.MaxLength = 2;
             this.ads.Name = "ads";
             this.ads.Size = new System.Drawing.Size(25, 20);
-            this.ads.TabIndex = 5;
+            this.ads.TabIndex = 7;
             this.ads.Text = "00";
             this.ads.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ads.TextChanged += new System.EventHandler(this.gen_Click);
@@ -142,7 +142,7 @@
             this.decpm.MaxLength = 1;
             this.decpm.Name = "decpm";
             this.decpm.Size = new System.Drawing.Size(25, 20);
-            this.decpm.TabIndex = 7;
+            this.decpm.TabIndex = 8;
             this.decpm.Text = "+";
             this.decpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.decpm.TextChanged += new System.EventHandler(this.gen_Click);
@@ -153,7 +153,7 @@
             this.dech.MaxLength = 2;
             this.dech.Name = "dech";
             this.dech.Size = new System.Drawing.Size(25, 20);
-            this.dech.TabIndex = 8;
+            this.dech.TabIndex = 9;
             this.dech.Text = "00";
             this.dech.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dech.TextChanged += new System.EventHandler(this.gen_Click);
@@ -164,7 +164,7 @@
             this.decm.MaxLength = 2;
             this.decm.Name = "decm";
             this.decm.Size = new System.Drawing.Size(25, 20);
-            this.decm.TabIndex = 9;
+            this.decm.TabIndex = 10;
             this.decm.Text = "00";
             this.decm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.decm.TextChanged += new System.EventHandler(this.gen_Click);
@@ -175,7 +175,7 @@
             this.decs.MaxLength = 2;
             this.decs.Name = "decs";
             this.decs.Size = new System.Drawing.Size(25, 20);
-            this.decs.TabIndex = 10;
+            this.decs.TabIndex = 11;
             this.decs.Text = "00";
             this.decs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.decs.TextChanged += new System.EventHandler(this.gen_Click);
@@ -195,7 +195,7 @@
             this.year.MaxLength = 4;
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(63, 20);
-            this.year.TabIndex = 12;
+            this.year.TabIndex = 2;
             this.year.Text = "2023";
             this.year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.year.TextChanged += new System.EventHandler(this.gen_Click);
@@ -224,7 +224,7 @@
             this.mount.MaxLength = 2;
             this.mount.Name = "mount";
             this.mount.Size = new System.Drawing.Size(63, 20);
-            this.mount.TabIndex = 15;
+            this.mount.TabIndex = 3;
             this.mount.Text = "01";
             this.mount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mount.TextChanged += new System.EventHandler(this.gen_Click);
@@ -235,7 +235,7 @@
             this.day.MaxLength = 2;
             this.day.Name = "day";
             this.day.Size = new System.Drawing.Size(63, 20);
-            this.day.TabIndex = 16;
+            this.day.TabIndex = 4;
             this.day.Text = "01";
             this.day.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.day.TextChanged += new System.EventHandler(this.gen_Click);
@@ -264,7 +264,7 @@
             this.obscde.MaxLength = 3;
             this.obscde.Name = "obscde";
             this.obscde.Size = new System.Drawing.Size(63, 20);
-            this.obscde.TabIndex = 19;
+            this.obscde.TabIndex = 12;
             this.obscde.Text = "M10";
             this.obscde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.obscde.TextChanged += new System.EventHandler(this.gen_Click);
@@ -275,14 +275,14 @@
             this.ext.Name = "ext";
             this.ext.ReadOnly = true;
             this.ext.Size = new System.Drawing.Size(410, 20);
-            this.ext.TabIndex = 20;
+            this.ext.TabIndex = 22;
             // 
             // gen
             // 
             this.gen.Location = new System.Drawing.Point(125, 314);
             this.gen.Name = "gen";
             this.gen.Size = new System.Drawing.Size(94, 23);
-            this.gen.TabIndex = 21;
+            this.gen.TabIndex = 18;
             this.gen.Text = "Générer ligne";
             this.gen.UseVisualStyleBackColor = true;
             this.gen.Click += new System.EventHandler(this.gen_Click);
@@ -292,7 +292,7 @@
             this.exit.Location = new System.Drawing.Point(325, 314);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(94, 23);
-            this.exit.TabIndex = 22;
+            this.exit.TabIndex = 20;
             this.exit.Text = "Quitter";
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
@@ -302,7 +302,7 @@
             this.button2.Location = new System.Drawing.Point(225, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 24;
+            this.button2.TabIndex = 19;
             this.button2.Text = "Générer fichier";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -321,7 +321,7 @@
             this.nametxt.Location = new System.Drawing.Point(154, 274);
             this.nametxt.Name = "nametxt";
             this.nametxt.Size = new System.Drawing.Size(63, 20);
-            this.nametxt.TabIndex = 26;
+            this.nametxt.TabIndex = 13;
             this.nametxt.Text = "toconf";
             this.nametxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nametxt.TextChanged += new System.EventHandler(this.gen_Click);
@@ -331,7 +331,7 @@
             this.empl.Location = new System.Drawing.Point(198, 242);
             this.empl.Name = "empl";
             this.empl.Size = new System.Drawing.Size(174, 20);
-            this.empl.TabIndex = 27;
+            this.empl.TabIndex = 21;
             this.empl.Text = "C:\\Users\\PIN-FERRIER\\Desktop\\";
             // 
             // label10
@@ -348,7 +348,7 @@
             this.nametxt1.Location = new System.Drawing.Point(223, 274);
             this.nametxt1.Name = "nametxt1";
             this.nametxt1.Size = new System.Drawing.Size(31, 20);
-            this.nametxt1.TabIndex = 29;
+            this.nametxt1.TabIndex = 14;
             this.nametxt1.Text = "1";
             this.nametxt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nametxt1.TextChanged += new System.EventHandler(this.gen_Click);
@@ -359,7 +359,7 @@
             this.button1.Location = new System.Drawing.Point(260, 274);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 21);
-            this.button1.TabIndex = 30;
+            this.button1.TabIndex = 15;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -380,7 +380,7 @@
             this.button3.Location = new System.Drawing.Point(291, 274);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(25, 21);
-            this.button3.TabIndex = 32;
+            this.button3.TabIndex = 16;
             this.button3.Text = "-";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -390,7 +390,7 @@
             this.charge.Location = new System.Drawing.Point(13, 314);
             this.charge.Name = "charge";
             this.charge.Size = new System.Drawing.Size(106, 23);
-            this.charge.TabIndex = 33;
+            this.charge.TabIndex = 17;
             this.charge.Text = "Charger réglages";
             this.charge.UseVisualStyleBackColor = true;
             this.charge.Click += new System.EventHandler(this.charge_Click);
