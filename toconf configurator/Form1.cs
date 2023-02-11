@@ -38,6 +38,9 @@ namespace toconf_configurator
                     day.Text = file.ReadLine();
                     year.Text = file.ReadLine();
                     nametxt.Text = file.ReadLine();
+                    ciblename.Text = file.ReadLine();
+                    numnom.Text = file.ReadLine();
+                    nametxt1.Text = file.ReadLine();
                 }
             }
         }
@@ -68,6 +71,8 @@ namespace toconf_configurator
                     file.WriteLine(year.Text);
                     file.WriteLine(nametxt.Text);
                     file.WriteLine(ciblename.Text);
+                    file.WriteLine(numnom.Text);
+                    file.WriteLine(nametxt1.Text);
                 }
             }
             else
@@ -81,6 +86,8 @@ namespace toconf_configurator
                     file.WriteLine(year.Text);
                     file.WriteLine(nametxt.Text);
                     file.WriteLine(ciblename.Text);
+                    file.WriteLine(numnom.Text);
+                    file.WriteLine(nametxt1.Text);
                 }
             }
             // Pour quitter le programme
@@ -132,6 +139,8 @@ namespace toconf_configurator
                     year.Text = file.ReadLine();
                     nametxt.Text = file.ReadLine();
                     ciblename.Text = file.ReadLine();
+                    numnom.Text = file.ReadLine();
+                    nametxt1.Text = file.ReadLine();
                 }
             }
         }
