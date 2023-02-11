@@ -145,5 +145,13 @@ namespace toconf_configurator
             int CC = AA + BB;
             numnom.Text = CC.ToString("D2");
         }
+
+        private void downn_Click(object sender, EventArgs e)
+        {
+            int AA = int.Parse(numnom.Text);
+            int BB = int.Parse(label11.Text);
+            int CC = AA - BB;
+            numnom.Text = CC.ToString("D2");
+        }
     }
 }

@@ -406,6 +406,7 @@
             this.numnom.TabIndex = 32;
             this.numnom.Text = "01";
             this.numnom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numnom.TextChanged += new System.EventHandler(this.gen_Click);
             // 
             // upn
             // 
@@ -427,6 +428,7 @@
             this.downn.TabIndex = 34;
             this.downn.Text = "-";
             this.downn.UseVisualStyleBackColor = true;
+            this.downn.Click += new System.EventHandler(this.downn_Click);
             // 
             // Form1
             // 
