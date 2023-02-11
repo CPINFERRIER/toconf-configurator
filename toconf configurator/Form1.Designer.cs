@@ -70,6 +70,8 @@
             this.adplus = new System.Windows.Forms.Button();
             this.admoins = new System.Windows.Forms.Button();
             this.valmin = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -484,14 +486,34 @@
             this.valmin.Name = "valmin";
             this.valmin.Size = new System.Drawing.Size(63, 20);
             this.valmin.TabIndex = 39;
-            this.valmin.Text = "01";
+            this.valmin.Text = "04";
             this.valmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(325, 144);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 13);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Défini la valeur de saut";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(333, 157);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 13);
+            this.label13.TabIndex = 41;
+            this.label13.Text = " en AD en minutes";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 349);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.valmin);
             this.Controls.Add(this.admoins);
             this.Controls.Add(this.adplus);
@@ -585,6 +607,8 @@
         private System.Windows.Forms.Button adplus;
         private System.Windows.Forms.Button admoins;
         private System.Windows.Forms.TextBox valmin;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 

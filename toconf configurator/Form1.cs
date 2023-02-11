@@ -42,6 +42,7 @@ namespace toconf_configurator
                     ciblename.Text = file.ReadLine();
                     numnom.Text = file.ReadLine();
                     nametxt1.Text = file.ReadLine();
+                    valmin.Text = file.ReadLine();
                 }
             }
         }
@@ -74,6 +75,7 @@ namespace toconf_configurator
                     file.WriteLine(ciblename.Text);
                     file.WriteLine(numnom.Text);
                     file.WriteLine(nametxt1.Text);
+                    file.WriteLine(valmin.Text);
                 }
             }
             else
@@ -89,6 +91,7 @@ namespace toconf_configurator
                     file.WriteLine(ciblename.Text);
                     file.WriteLine(numnom.Text);
                     file.WriteLine(nametxt1.Text);
+                    file.WriteLine(valmin.Text);
                 }
             }
             // Pour quitter le programme
@@ -142,6 +145,7 @@ namespace toconf_configurator
                     ciblename.Text = file.ReadLine();
                     numnom.Text = file.ReadLine();
                     nametxt1.Text = file.ReadLine();
+                    valmin.Text = file.ReadLine();
                 }
             }
         }
