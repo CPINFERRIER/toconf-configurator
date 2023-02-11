@@ -108,7 +108,7 @@ namespace toconf_configurator
          
         }
 
-        //bouton + pour monter incrémenter le fichier
+        //bouton + pour monter incrémenter le nom fichier
         private void up_Click(object sender, EventArgs e)
         {
             int A = int.Parse(nametxt1.Text);
@@ -118,7 +118,7 @@ namespace toconf_configurator
 
         }
 
-        //bouton - pour décrémenter le fichier
+        //bouton - pour décrémenter le nom fichier
         private void down_Click(object sender, EventArgs e)
         {
             int A = int.Parse(nametxt1.Text);
@@ -150,6 +150,7 @@ namespace toconf_configurator
             }
         }
 
+        //incrémente de 1 le nom de cible
         private void upn_Click(object sender, EventArgs e)
         {
             int AA = int.Parse(numnom.Text);
@@ -158,6 +159,7 @@ namespace toconf_configurator
             numnom.Text = CC.ToString("D2");
         }
 
+        //décrémente de 1 le nom de cible
         private void downn_Click(object sender, EventArgs e)
         {
             int AA = int.Parse(numnom.Text);
@@ -166,6 +168,7 @@ namespace toconf_configurator
             numnom.Text = CC.ToString("D2");
         }
 
+        //bouton qui génére le fichier de sortie et qui incrémente de 1 le nom, de 1 le fichier de sortie 
         private void genfiup_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
@@ -186,12 +189,14 @@ namespace toconf_configurator
             numnom.Text = CC.ToString("D2");
         }
 
+        // reset les valeur du nom de cible et du nom de fichier de sortie à 01
         private void reset_Click(object sender, EventArgs e)
         {
             nametxt1.Text = "01";
             numnom.Text = "01";
         }
 
+        // bouton + qui incrémente la valeur AD de -XX
         private void adplus_Click(object sender, EventArgs e)
         {
             int num1 = int.Parse(adh.Text);
@@ -217,6 +222,7 @@ namespace toconf_configurator
             adm.Text = num2.ToString("D2");
         }
 
+        // bouton + qui décremente la valeur AD de -XX
         private void admoins_Click(object sender, EventArgs e)
         {
             int num3 = int.Parse(adh.Text);
@@ -242,6 +248,7 @@ namespace toconf_configurator
             adm.Text = num4.ToString("D2");
         }
 
+        //bouton qui génére le fichier de sortie et qui incrémente de 1 le nom, de 1 le fichier de sortie et de +XX en minute la valeur AD
         private void genfiupall_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
