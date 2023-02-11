@@ -45,7 +45,7 @@ namespace toconf_configurator
         //bouton qui écrit la ligne pour inspection
         private void gen_Click(object sender, EventArgs e)
         {
-            ext.Text = "     " + ciblename.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
+            ext.Text = "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
                 adh.Text + " " + adm.Text + " " + ads.Text +".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                 decs.Text +".0" + "                      " + obscde.Text;
             Clipboard.SetText(ext.Text);
@@ -89,7 +89,7 @@ namespace toconf_configurator
         private void genfi_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
-            File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+            File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                 decs.Text + ".0" + "                      " + obscde.Text);
 
@@ -136,6 +136,14 @@ namespace toconf_configurator
                     nametxt.Text = file.ReadLine();
                 }
             }
+        }
+
+        private void upn_Click(object sender, EventArgs e)
+        {
+            int AA = int.Parse(numnom.Text);
+            int BB = int.Parse(label11.Text);
+            int CC = AA + BB;
+            numnom.Text = CC.ToString("D2");
         }
     }
 }
