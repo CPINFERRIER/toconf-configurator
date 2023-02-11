@@ -67,6 +67,7 @@ namespace toconf_configurator
                     file.WriteLine(day.Text);
                     file.WriteLine(year.Text);
                     file.WriteLine(nametxt.Text);
+                    file.WriteLine(ciblename.Text);
                 }
             }
             else
@@ -79,6 +80,7 @@ namespace toconf_configurator
                     file.WriteLine(day.Text);
                     file.WriteLine(year.Text);
                     file.WriteLine(nametxt.Text);
+                    file.WriteLine(ciblename.Text);
                 }
             }
             // Pour quitter le programme
@@ -129,6 +131,7 @@ namespace toconf_configurator
                     day.Text = file.ReadLine();
                     year.Text = file.ReadLine();
                     nametxt.Text = file.ReadLine();
+                    ciblename.Text = file.ReadLine();
                 }
             }
         }
@@ -167,6 +170,12 @@ namespace toconf_configurator
             int BB = int.Parse(label11.Text);
             int CC = AA + BB;
             numnom.Text = CC.ToString("D2");
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            nametxt1.Text = "01";
+            numnom.Text = "01";
         }
     }
 }

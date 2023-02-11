@@ -66,6 +66,7 @@
             this.upn = new System.Windows.Forms.Button();
             this.downn = new System.Windows.Forms.Button();
             this.genfiup = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -275,7 +276,7 @@
             // 
             // ext
             // 
-            this.ext.Location = new System.Drawing.Point(13, 198);
+            this.ext.Location = new System.Drawing.Point(26, 198);
             this.ext.Name = "ext";
             this.ext.ReadOnly = true;
             this.ext.Size = new System.Drawing.Size(410, 20);
@@ -283,7 +284,7 @@
             // 
             // gen
             // 
-            this.gen.Location = new System.Drawing.Point(10, 314);
+            this.gen.Location = new System.Drawing.Point(13, 293);
             this.gen.Name = "gen";
             this.gen.Size = new System.Drawing.Size(94, 23);
             this.gen.TabIndex = 18;
@@ -303,7 +304,7 @@
             // 
             // genfi
             // 
-            this.genfi.Location = new System.Drawing.Point(109, 314);
+            this.genfi.Location = new System.Drawing.Point(13, 322);
             this.genfi.Name = "genfi";
             this.genfi.Size = new System.Drawing.Size(94, 23);
             this.genfi.TabIndex = 19;
@@ -314,7 +315,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(70, 277);
+            this.label9.Location = new System.Drawing.Point(81, 259);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 25;
@@ -322,7 +323,7 @@
             // 
             // nametxt
             // 
-            this.nametxt.Location = new System.Drawing.Point(154, 274);
+            this.nametxt.Location = new System.Drawing.Point(165, 256);
             this.nametxt.Name = "nametxt";
             this.nametxt.Size = new System.Drawing.Size(63, 20);
             this.nametxt.TabIndex = 13;
@@ -332,7 +333,7 @@
             // 
             // empl
             // 
-            this.empl.Location = new System.Drawing.Point(198, 242);
+            this.empl.Location = new System.Drawing.Point(209, 224);
             this.empl.Name = "empl";
             this.empl.Size = new System.Drawing.Size(174, 20);
             this.empl.TabIndex = 21;
@@ -341,7 +342,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 245);
+            this.label10.Location = new System.Drawing.Point(53, 227);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 13);
             this.label10.TabIndex = 28;
@@ -349,7 +350,7 @@
             // 
             // nametxt1
             // 
-            this.nametxt1.Location = new System.Drawing.Point(223, 274);
+            this.nametxt1.Location = new System.Drawing.Point(234, 256);
             this.nametxt1.Name = "nametxt1";
             this.nametxt1.Size = new System.Drawing.Size(31, 20);
             this.nametxt1.TabIndex = 14;
@@ -360,7 +361,7 @@
             // up
             // 
             this.up.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.up.Location = new System.Drawing.Point(260, 274);
+            this.up.Location = new System.Drawing.Point(271, 256);
             this.up.Name = "up";
             this.up.Size = new System.Drawing.Size(25, 21);
             this.up.TabIndex = 15;
@@ -371,7 +372,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(322, 277);
+            this.label11.Location = new System.Drawing.Point(333, 259);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 31;
@@ -381,7 +382,7 @@
             // down
             // 
             this.down.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.down.Location = new System.Drawing.Point(291, 274);
+            this.down.Location = new System.Drawing.Point(302, 256);
             this.down.Name = "down";
             this.down.Size = new System.Drawing.Size(25, 21);
             this.down.TabIndex = 16;
@@ -433,7 +434,7 @@
             // 
             // genfiup
             // 
-            this.genfiup.Location = new System.Drawing.Point(208, 314);
+            this.genfiup.Location = new System.Drawing.Point(148, 293);
             this.genfiup.Name = "genfiup";
             this.genfiup.Size = new System.Drawing.Size(123, 23);
             this.genfiup.TabIndex = 35;
@@ -441,11 +442,22 @@
             this.genfiup.UseVisualStyleBackColor = true;
             this.genfiup.Click += new System.EventHandler(this.genfiup_Click);
             // 
+            // reset
+            // 
+            this.reset.Location = new System.Drawing.Point(132, 322);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(156, 23);
+            this.reset.TabIndex = 36;
+            this.reset.Text = "Reset num fichier et cible";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 349);
+            this.Controls.Add(this.reset);
             this.Controls.Add(this.genfiup);
             this.Controls.Add(this.downn);
             this.Controls.Add(this.upn);
@@ -531,6 +543,7 @@
         private System.Windows.Forms.Button upn;
         private System.Windows.Forms.Button downn;
         private System.Windows.Forms.Button genfiup;
+        private System.Windows.Forms.Button reset;
     }
 }
 
