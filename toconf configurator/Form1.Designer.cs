@@ -67,6 +67,9 @@
             this.downn = new System.Windows.Forms.Button();
             this.genfiup = new System.Windows.Forms.Button();
             this.reset = new System.Windows.Forms.Button();
+            this.adplus = new System.Windows.Forms.Button();
+            this.admoins = new System.Windows.Forms.Button();
+            this.valmin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -452,11 +455,46 @@
             this.reset.UseVisualStyleBackColor = true;
             this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
+            // adplus
+            // 
+            this.adplus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adplus.Location = new System.Drawing.Point(290, 120);
+            this.adplus.Name = "adplus";
+            this.adplus.Size = new System.Drawing.Size(25, 21);
+            this.adplus.TabIndex = 37;
+            this.adplus.Text = "+";
+            this.adplus.UseVisualStyleBackColor = true;
+            this.adplus.Click += new System.EventHandler(this.adplus_Click);
+            // 
+            // admoins
+            // 
+            this.admoins.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admoins.Location = new System.Drawing.Point(321, 120);
+            this.admoins.Name = "admoins";
+            this.admoins.Size = new System.Drawing.Size(25, 21);
+            this.admoins.TabIndex = 38;
+            this.admoins.Text = "-";
+            this.admoins.UseVisualStyleBackColor = true;
+            this.admoins.Click += new System.EventHandler(this.admoins_Click);
+            // 
+            // valmin
+            // 
+            this.valmin.Location = new System.Drawing.Point(352, 121);
+            this.valmin.MaxLength = 2;
+            this.valmin.Name = "valmin";
+            this.valmin.Size = new System.Drawing.Size(63, 20);
+            this.valmin.TabIndex = 39;
+            this.valmin.Text = "01";
+            this.valmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 349);
+            this.Controls.Add(this.valmin);
+            this.Controls.Add(this.admoins);
+            this.Controls.Add(this.adplus);
             this.Controls.Add(this.reset);
             this.Controls.Add(this.genfiup);
             this.Controls.Add(this.downn);
@@ -544,6 +582,9 @@
         private System.Windows.Forms.Button downn;
         private System.Windows.Forms.Button genfiup;
         private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Button adplus;
+        private System.Windows.Forms.Button admoins;
+        private System.Windows.Forms.TextBox valmin;
     }
 }
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -186,5 +187,57 @@ namespace toconf_configurator
             nametxt1.Text = "01";
             numnom.Text = "01";
         }
-    }
+
+        private void adplus_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(adh.Text);
+            int num2 = int.Parse(adm.Text);
+            int numplus = int.Parse(valmin.Text);
+
+            if (num2 >= 58)
+            {
+                num2 = 0;
+                num1++;
+            }
+            else
+            {
+                num2 += numplus;
+            }
+
+            if (num1 > 24)
+            {
+                num1 = 0;
+            }
+
+            adh.Text = num1.ToString("D2");
+            adm.Text = num2.ToString("D2");
+        }
+
+        private void admoins_Click(object sender, EventArgs e)
+        {
+            int num3 = int.Parse(adh.Text);
+            int num4 = int.Parse(adm.Text);
+            int numplus = int.Parse(valmin.Text);
+
+            if (num4 <= 0)
+            {
+                num4 = 59;
+                num3--;
+            }
+            else
+            {
+                num4 -= numplus;
+            }
+
+            if (num3 < 0)
+            {
+                num3 = 24;
+            }
+
+            adh.Text = num3.ToString("D2");
+            adm.Text = num4.ToString("D2");
+        }
+
+        
+}
 }
