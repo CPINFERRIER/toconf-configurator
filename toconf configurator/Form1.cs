@@ -273,7 +273,7 @@ namespace toconf_configurator
             int num2 = int.Parse(adm.Text);
             int numplus = int.Parse(valmin.Text);
 
-            if (num2 >= 58)
+            if (num2 >= 59)
             {
                 num2 = 0;
                 num1++;
