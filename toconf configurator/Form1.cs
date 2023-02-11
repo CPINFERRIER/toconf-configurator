@@ -98,6 +98,12 @@ namespace toconf_configurator
             int B = int.Parse(label11.Text);
             int C = A + B;
             nametxt1.Text = C.ToString("D2");
+
+            // monte de +1 le nom de la cible
+            int AA = int.Parse(numnom.Text);
+            int BB = int.Parse(label11.Text);
+            int CC = AA + BB;
+            numnom.Text = CC.ToString("D2");
         }
 
         //bouton + pour monter incrémenter le fichier
