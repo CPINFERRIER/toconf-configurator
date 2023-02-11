@@ -349,7 +349,7 @@
             this.nametxt1.Name = "nametxt1";
             this.nametxt1.Size = new System.Drawing.Size(31, 20);
             this.nametxt1.TabIndex = 14;
-            this.nametxt1.Text = "1";
+            this.nametxt1.Text = "01";
             this.nametxt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nametxt1.TextChanged += new System.EventHandler(this.gen_Click);
             // 

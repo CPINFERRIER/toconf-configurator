@@ -97,7 +97,7 @@ namespace toconf_configurator
             int A = int.Parse(nametxt1.Text);
             int B = int.Parse(label11.Text);
             int C = A + B;
-            nametxt1.Text = C.ToString();
+            nametxt1.Text = C.ToString("D2");
         }
 
         //bouton + pour monter incrémenter le fichier
@@ -106,7 +106,7 @@ namespace toconf_configurator
             int A = int.Parse(nametxt1.Text);
             int B = int.Parse(label11.Text);
             int C = A + B;
-            nametxt1.Text = C.ToString();
+            nametxt1.Text = C.ToString("D2");
 
         }
 
@@ -116,7 +116,7 @@ namespace toconf_configurator
             int A = int.Parse(nametxt1.Text);
             int B = int.Parse(label11.Text);
             int C = A - B;
-            nametxt1.Text = C.ToString();
+            nametxt1.Text = C.ToString("D2");
         }
 
         //bouton pour recharger les paramétres
