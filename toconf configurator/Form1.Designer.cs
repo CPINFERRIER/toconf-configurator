@@ -440,17 +440,17 @@
             // 
             // genfiup
             // 
-            this.genfiup.Location = new System.Drawing.Point(162, 379);
+            this.genfiup.Location = new System.Drawing.Point(163, 362);
             this.genfiup.Name = "genfiup";
-            this.genfiup.Size = new System.Drawing.Size(123, 23);
+            this.genfiup.Size = new System.Drawing.Size(123, 52);
             this.genfiup.TabIndex = 35;
-            this.genfiup.Text = "Générer fichier + up";
+            this.genfiup.Text = "Générer fichier + up nom cible et fichier";
             this.genfiup.UseVisualStyleBackColor = true;
             this.genfiup.Click += new System.EventHandler(this.genfiup_Click);
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(208, 408);
+            this.reset.Location = new System.Drawing.Point(209, 420);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(156, 23);
             this.reset.TabIndex = 36;
@@ -510,11 +510,11 @@
             // 
             // genfiupall
             // 
-            this.genfiupall.Location = new System.Drawing.Point(291, 379);
+            this.genfiupall.Location = new System.Drawing.Point(292, 362);
             this.genfiupall.Name = "genfiupall";
-            this.genfiupall.Size = new System.Drawing.Size(123, 23);
+            this.genfiupall.Size = new System.Drawing.Size(123, 52);
             this.genfiupall.TabIndex = 42;
-            this.genfiupall.Text = "Générer fichier + up all";
+            this.genfiupall.Text = "Générer fichier + up nom cible, fichier et minutes AD";
             this.genfiupall.UseVisualStyleBackColor = true;
             this.genfiupall.Click += new System.EventHandler(this.genfiupall_Click);
             // 
