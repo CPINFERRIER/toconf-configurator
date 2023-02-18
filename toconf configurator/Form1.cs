@@ -191,12 +191,7 @@ namespace toconf_configurator
                 int BB = int.Parse(label11.Text);
                 int CC = AA + BB;
                 numnom.Text = CC.ToString("D2");
-
-                string fileName2 = nametxt.Text + nametxt1.Text + ".txt";
-
-                File.WriteAllText(empl.Text + fileName2, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
-                    adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                    decs.Text + ".0" + "                      " + obscde.Text);
+                                
             }
             //si il existe pas
             else
@@ -324,13 +319,7 @@ namespace toconf_configurator
 
                 adh.Text = num1.ToString("D2");
                 adm.Text = num2.ToString("D2");
-
-                string fileName3 = nametxt.Text + nametxt1.Text + ".txt";
-
-                File.WriteAllText(empl.Text + fileName3, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
-                adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text);
-
+                             
             }
             //si le fichier n'existe pas
             else
@@ -375,6 +364,11 @@ namespace toconf_configurator
                 adm.Text = num2.ToString("D2");
                                 
             }
+        }
+
+        private void resad_Click(object sender, EventArgs e)
+        {
+            adm.Text = "00";
         }
     }
 }
