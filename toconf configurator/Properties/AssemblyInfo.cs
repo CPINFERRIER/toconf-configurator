@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("toconf configurator")]
 [assembly: AssemblyDescription("générateur de fichier texte formaté pour observatoire")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Maison")]
 [assembly: AssemblyProduct("toconf configurator")]
 [assembly: AssemblyCopyright("Copyright © Cyril PIN-FERRIER  2023")]
 [assembly: AssemblyTrademark("")]
