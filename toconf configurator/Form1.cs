@@ -172,11 +172,11 @@ namespace toconf_configurator
         private void genfiup_Click(object sender, EventArgs e)
         {
 
-
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
-
+            //verifie si le fichier existe deja 
             string path = empl.Text + fileName;
             bool fileExist = File.Exists(path);
+            //si il existe deja
             if (fileExist)
             {
 
@@ -198,6 +198,7 @@ namespace toconf_configurator
                     adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                     decs.Text + ".0" + "                      " + obscde.Text);
             }
+            //si il existe pas
             else
             {
 
@@ -282,9 +283,10 @@ namespace toconf_configurator
         private void genfiupall_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
-
+            //vérifie si le fichier existe déja 
             string path = empl.Text + fileName;
             bool fileExist = File.Exists(path);
+            //si le fichier existe deja
             if (fileExist)
             {
 
@@ -330,7 +332,7 @@ namespace toconf_configurator
                 decs.Text + ".0" + "                      " + obscde.Text);
 
             }
-
+            //si le fichier n'existe pas
             else
             {
                 File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
