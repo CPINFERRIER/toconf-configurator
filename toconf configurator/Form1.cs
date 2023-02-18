@@ -171,22 +171,52 @@ namespace toconf_configurator
         //bouton qui génére le fichier de sortie et qui incrémente de 1 le nom, de 1 le fichier de sortie 
         private void genfiup_Click(object sender, EventArgs e)
         {
+
+
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
-            File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
-                adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text);
 
-            //monte de + 1 le nom du fichier de sortie
-            int A = int.Parse(nametxt1.Text);
-            int B = int.Parse(label11.Text);
-            int C = A + B;
-            nametxt1.Text = C.ToString("D2");
+            string path = empl.Text + fileName;
+            bool fileExist = File.Exists(path);
+            if (fileExist)
+            {
 
-            // monte de +1 le nom de la cible
-            int AA = int.Parse(numnom.Text);
-            int BB = int.Parse(label11.Text);
-            int CC = AA + BB;
-            numnom.Text = CC.ToString("D2");
+                //monte de + 1 le nom du fichier de sortie
+                int A = int.Parse(nametxt1.Text);
+                int B = int.Parse(label11.Text);
+                int C = A + B;
+                nametxt1.Text = C.ToString("D2");
+
+                // monte de +1 le nom de la cible
+                int AA = int.Parse(numnom.Text);
+                int BB = int.Parse(label11.Text);
+                int CC = AA + BB;
+                numnom.Text = CC.ToString("D2");
+
+                string fileName2 = nametxt.Text + nametxt1.Text + ".txt";
+
+                File.WriteAllText(empl.Text + fileName2, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+                    adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
+                    decs.Text + ".0" + "                      " + obscde.Text);
+            }
+            else
+            {
+
+                File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+                    adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
+                    decs.Text + ".0" + "                      " + obscde.Text);
+
+                //monte de + 1 le nom du fichier de sortie
+                int A = int.Parse(nametxt1.Text);
+                int B = int.Parse(label11.Text);
+                int C = A + B;
+                nametxt1.Text = C.ToString("D2");
+
+                // monte de +1 le nom de la cible
+                int AA = int.Parse(numnom.Text);
+                int BB = int.Parse(label11.Text);
+                int CC = AA + BB;
+                numnom.Text = CC.ToString("D2");
+            }
         }
 
         // reset les valeur du nom de cible et du nom de fichier de sortie à 01
@@ -252,44 +282,97 @@ namespace toconf_configurator
         private void genfiupall_Click(object sender, EventArgs e)
         {
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
-            File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+
+            string path = empl.Text + fileName;
+            bool fileExist = File.Exists(path);
+            if (fileExist)
+            {
+
+                //monte de + 1 le nom du fichier de sortie
+                int A = int.Parse(nametxt1.Text);
+                int B = int.Parse(label11.Text);
+                int C = A + B;
+                nametxt1.Text = C.ToString("D2");
+
+                // monte de +1 le nom de la cible
+                int AA = int.Parse(numnom.Text);
+                int BB = int.Parse(label11.Text);
+                int CC = AA + BB;
+                numnom.Text = CC.ToString("D2");
+
+                // monte de +xx la valeur de AD minute
+                int num1 = int.Parse(adh.Text);
+                int num2 = int.Parse(adm.Text);
+                int numplus = int.Parse(valmin.Text);
+
+                if (num2 >= 59)
+                {
+                    num2 = 0;
+                    num1++;
+                }
+                else
+                {
+                    num2 += numplus;
+                }
+
+                if (num1 > 24)
+                {
+                    num1 = 0;
+                }
+
+                adh.Text = num1.ToString("D2");
+                adm.Text = num2.ToString("D2");
+
+                string fileName3 = nametxt.Text + nametxt1.Text + ".txt";
+
+                File.WriteAllText(empl.Text + fileName3, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                 decs.Text + ".0" + "                      " + obscde.Text);
 
-            //monte de + 1 le nom du fichier de sortie
-            int A = int.Parse(nametxt1.Text);
-            int B = int.Parse(label11.Text);
-            int C = A + B;
-            nametxt1.Text = C.ToString("D2");
-
-            // monte de +1 le nom de la cible
-            int AA = int.Parse(numnom.Text);
-            int BB = int.Parse(label11.Text);
-            int CC = AA + BB;
-            numnom.Text = CC.ToString("D2");
-
-            // monte de +xx la valeur de AD minute
-            int num1 = int.Parse(adh.Text);
-            int num2 = int.Parse(adm.Text);
-            int numplus = int.Parse(valmin.Text);
-
-            if (num2 >= 59)
-            {
-                num2 = 0;
-                num1++;
             }
+
             else
             {
-                num2 += numplus;
-            }
+                File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+                adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
+                decs.Text + ".0" + "                      " + obscde.Text);
 
-            if (num1 > 24)
-            {
-                num1 = 0;
-            }
+                //monte de + 1 le nom du fichier de sortie
+                int A = int.Parse(nametxt1.Text);
+                int B = int.Parse(label11.Text);
+                int C = A + B;
+                nametxt1.Text = C.ToString("D2");
 
-            adh.Text = num1.ToString("D2");
-            adm.Text = num2.ToString("D2");
+                // monte de +1 le nom de la cible
+                int AA = int.Parse(numnom.Text);
+                int BB = int.Parse(label11.Text);
+                int CC = AA + BB;
+                numnom.Text = CC.ToString("D2");
+
+                // monte de +xx la valeur de AD minute
+                int num1 = int.Parse(adh.Text);
+                int num2 = int.Parse(adm.Text);
+                int numplus = int.Parse(valmin.Text);
+
+                if (num2 >= 59)
+                {
+                    num2 = 0;
+                    num1++;
+                }
+                else
+                {
+                    num2 += numplus;
+                }
+
+                if (num1 > 24)
+                {
+                    num1 = 0;
+                }
+
+                adh.Text = num1.ToString("D2");
+                adm.Text = num2.ToString("D2");
+                                
+            }
         }
     }
 }
