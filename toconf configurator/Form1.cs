@@ -52,7 +52,7 @@ namespace toconf_configurator
         {
             ext.Text = "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
                 adh.Text + " " + adm.Text + " " + ads.Text +".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text +".0" + "                      " + obscde.Text;
+                decs.Text +".0" + "                      " + obscde.Text + " ";
             Clipboard.SetText(ext.Text);
         }
 
@@ -104,7 +104,7 @@ namespace toconf_configurator
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
             File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text);
+                decs.Text + ".0" + "                      " + obscde.Text + " ");
          
         }
 
@@ -199,7 +199,7 @@ namespace toconf_configurator
 
                 File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                     adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                    decs.Text + ".0" + "                      " + obscde.Text);
+                    decs.Text + ".0" + "                      " + obscde.Text + " ");
 
                 //monte de + 1 le nom du fichier de sortie
                 int A = int.Parse(nametxt1.Text);
@@ -326,7 +326,7 @@ namespace toconf_configurator
             {
                 File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text);
+                decs.Text + ".0" + "                      " + obscde.Text + " ");
 
                 //monte de + 1 le nom du fichier de sortie
                 int A = int.Parse(nametxt1.Text);
