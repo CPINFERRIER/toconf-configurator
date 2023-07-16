@@ -77,7 +77,9 @@
             this.resad = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.chargefichneocp = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -295,7 +297,7 @@
             // 
             // gen
             // 
-            this.gen.Location = new System.Drawing.Point(12, 362);
+            this.gen.Location = new System.Drawing.Point(159, 19);
             this.gen.Name = "gen";
             this.gen.Size = new System.Drawing.Size(98, 23);
             this.gen.TabIndex = 18;
@@ -305,7 +307,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(371, 452);
+            this.exit.Location = new System.Drawing.Point(808, 472);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -315,7 +317,7 @@
             // 
             // genfi
             // 
-            this.genfi.Location = new System.Drawing.Point(12, 391);
+            this.genfi.Location = new System.Drawing.Point(159, 48);
             this.genfi.Name = "genfi";
             this.genfi.Size = new System.Drawing.Size(98, 23);
             this.genfi.TabIndex = 19;
@@ -403,7 +405,7 @@
             // 
             // charge
             // 
-            this.charge.Location = new System.Drawing.Point(12, 420);
+            this.charge.Location = new System.Drawing.Point(159, 77);
             this.charge.Name = "charge";
             this.charge.Size = new System.Drawing.Size(98, 23);
             this.charge.TabIndex = 17;
@@ -445,7 +447,7 @@
             // 
             // genfiup
             // 
-            this.genfiup.Location = new System.Drawing.Point(163, 362);
+            this.genfiup.Location = new System.Drawing.Point(80, 125);
             this.genfiup.Name = "genfiup";
             this.genfiup.Size = new System.Drawing.Size(123, 52);
             this.genfiup.TabIndex = 35;
@@ -455,7 +457,7 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(209, 420);
+            this.reset.Location = new System.Drawing.Point(126, 183);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(156, 23);
             this.reset.TabIndex = 36;
@@ -515,7 +517,7 @@
             // 
             // genfiupall
             // 
-            this.genfiupall.Location = new System.Drawing.Point(292, 362);
+            this.genfiupall.Location = new System.Drawing.Point(209, 125);
             this.genfiupall.Name = "genfiupall";
             this.genfiupall.Size = new System.Drawing.Size(123, 52);
             this.genfiupall.TabIndex = 42;
@@ -544,7 +546,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(39, 513);
+            this.richTextBox1.Location = new System.Drawing.Point(30, 367);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(879, 99);
             this.richTextBox1.TabIndex = 45;
@@ -552,7 +554,7 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(411, 618);
+            this.chargefichneocp.Location = new System.Drawing.Point(391, 472);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(147, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -560,27 +562,39 @@
             this.chargefichneocp.UseVisualStyleBackColor = true;
             this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.gen);
+            this.groupBox1.Controls.Add(this.genfi);
+            this.groupBox1.Controls.Add(this.charge);
+            this.groupBox1.Controls.Add(this.genfiupall);
+            this.groupBox1.Controls.Add(this.genfiup);
+            this.groupBox1.Controls.Add(this.reset);
+            this.groupBox1.Location = new System.Drawing.Point(503, 69);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(406, 226);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Fonctions";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 648);
+            this.ClientSize = new System.Drawing.Size(939, 520);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chargefichneocp);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.resad);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.genfiupall);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.valmin);
             this.Controls.Add(this.admoins);
             this.Controls.Add(this.adplus);
-            this.Controls.Add(this.reset);
-            this.Controls.Add(this.genfiup);
             this.Controls.Add(this.downn);
             this.Controls.Add(this.upn);
             this.Controls.Add(this.numnom);
-            this.Controls.Add(this.charge);
             this.Controls.Add(this.down);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.up);
@@ -589,9 +603,7 @@
             this.Controls.Add(this.empl);
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.genfi);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.gen);
             this.Controls.Add(this.ext);
             this.Controls.Add(this.obscde);
             this.Controls.Add(this.label8);
@@ -618,6 +630,7 @@
             this.Text = "toconf Generator";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,6 +686,7 @@
         private System.Windows.Forms.Button resad;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button chargefichneocp;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
