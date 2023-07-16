@@ -75,6 +75,8 @@
             this.genfiupall = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.resad = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.chargefichneocp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -346,7 +348,7 @@
             this.empl.Name = "empl";
             this.empl.Size = new System.Drawing.Size(174, 20);
             this.empl.TabIndex = 21;
-            this.empl.Text = "C:\\Users\\PIN-FERRIER\\Desktop\\";
+            this.empl.Text = "C:\\Users\\cyril\\Desktop\\";
             // 
             // label10
             // 
@@ -490,7 +492,7 @@
             this.valmin.Name = "valmin";
             this.valmin.Size = new System.Drawing.Size(63, 20);
             this.valmin.TabIndex = 39;
-            this.valmin.Text = "04";
+            this.valmin.Text = "05";
             this.valmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -540,11 +542,31 @@
             this.resad.UseVisualStyleBackColor = true;
             this.resad.Click += new System.EventHandler(this.resad_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(39, 513);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(879, 99);
+            this.richTextBox1.TabIndex = 45;
+            this.richTextBox1.Text = "";
+            // 
+            // chargefichneocp
+            // 
+            this.chargefichneocp.Location = new System.Drawing.Point(411, 618);
+            this.chargefichneocp.Name = "chargefichneocp";
+            this.chargefichneocp.Size = new System.Drawing.Size(147, 23);
+            this.chargefichneocp.TabIndex = 46;
+            this.chargefichneocp.Text = "Charger fichier NEOCP";
+            this.chargefichneocp.UseVisualStyleBackColor = true;
+            this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 487);
+            this.ClientSize = new System.Drawing.Size(1251, 648);
+            this.Controls.Add(this.chargefichneocp);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.resad);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.genfiupall);
@@ -649,6 +671,8 @@
         private System.Windows.Forms.Button genfiupall;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button resad;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button chargefichneocp;
     }
 }
 
