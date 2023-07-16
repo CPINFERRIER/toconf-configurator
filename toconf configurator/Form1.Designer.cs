@@ -350,7 +350,7 @@
             this.empl.Name = "empl";
             this.empl.Size = new System.Drawing.Size(174, 20);
             this.empl.TabIndex = 21;
-            this.empl.Text = "C:\\Users\\cyril\\Desktop\\";
+            this.empl.Text = "C:\\Users\\cyril\\Desktop";
             // 
             // label10
             // 
