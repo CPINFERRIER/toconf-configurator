@@ -557,7 +557,7 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(68, 566);
+            this.chargefichneocp.Location = new System.Drawing.Point(31, 566);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -593,7 +593,7 @@
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(376, 565);
+            this.chargefich2neo.Location = new System.Drawing.Point(326, 566);
             this.chargefich2neo.Name = "chargefich2neo";
             this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
             this.chargefich2neo.TabIndex = 48;
