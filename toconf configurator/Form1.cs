@@ -30,7 +30,7 @@ namespace toconf_configurator
         private void Form1_Load(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            string mfileName = "toconf.txt";
+            string mfileName = "toconf.tcf";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
@@ -46,7 +46,12 @@ namespace toconf_configurator
                     nametxt1.Text = file.ReadLine();
                     valmin.Text = file.ReadLine();
                 }
+                
             }
+            DateTime currentDate = DateTime.Today;
+            year.Text = currentDate.ToString("yyyy");
+            mount.Text = currentDate.ToString("MM");
+            day.Text = currentDate.ToString("dd");
         }
 
         //bouton qui écrit la ligne pour inspection
@@ -62,7 +67,7 @@ namespace toconf_configurator
         private void exit_Click(object sender, EventArgs e)
         {
             // Pour enregistrer les paramétres
-            string mfileName = "toconf.txt";
+            string mfileName = "toconf.tcf";
             if (File.Exists(mfileName))
             {
                 File.Delete(mfileName);
@@ -133,7 +138,7 @@ namespace toconf_configurator
         private void charge_Click(object sender, EventArgs e)
         {
             // Pour loader les paramètres
-            string mfileName = "toconf.txt";
+            string mfileName = "toconf.tcf";
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
@@ -374,7 +379,7 @@ namespace toconf_configurator
             adm.Text = "00";
         }
 
-        // charger le fichier text générer par le script python
+        // genere et charger le fichier text générer par le script python
         private void chargefichneocp_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -403,6 +408,8 @@ namespace toconf_configurator
             }
         }
 
+
+        // choisir l'emplacement d'enregistrement de toconf
         private void emplregister_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
