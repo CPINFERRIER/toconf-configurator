@@ -437,7 +437,7 @@ namespace toconf_configurator
             }
         }
 
-        //Transfere de la ligne selectionner dans les cases AD et DEC
+        //Transfere de la ligne selectionner dans les cases AD et DEC 
         private void transf_Click_1(object sender, EventArgs e)
         //private void richTextBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
