@@ -551,13 +551,13 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(30, 367);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(879, 192);
+            this.richTextBox1.Size = new System.Drawing.Size(554, 192);
             this.richTextBox1.TabIndex = 45;
             this.richTextBox1.Text = "";
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(182, 566);
+            this.chargefichneocp.Location = new System.Drawing.Point(68, 566);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -593,7 +593,7 @@
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(448, 566);
+            this.chargefich2neo.Location = new System.Drawing.Point(376, 565);
             this.chargefich2neo.Name = "chargefich2neo";
             this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
             this.chargefich2neo.TabIndex = 48;
