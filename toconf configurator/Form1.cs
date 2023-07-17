@@ -420,5 +420,19 @@ namespace toconf_configurator
                 empl.Text = selectedPath + @"\";
             }
         }
+
+        private void chargefich2neo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Fichiers texte (*.txt)|*.txt";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string cheminFichier = openFileDialog.FileName;
+                string contenuFichier = File.ReadAllText(cheminFichier);
+
+                richTextBox1.Text = contenuFichier;
+            }
+        }
     }
 }

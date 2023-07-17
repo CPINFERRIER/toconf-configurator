@@ -79,6 +79,7 @@
             this.chargefichneocp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.emplregister = new System.Windows.Forms.Button();
+            this.chargefich2neo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +97,7 @@
             // 
             this.ciblename.AccessibleDescription = "";
             this.ciblename.Location = new System.Drawing.Point(164, 29);
-            this.ciblename.MaxLength = 7;
+            this.ciblename.MaxLength = 5;
             this.ciblename.Name = "ciblename";
             this.ciblename.Size = new System.Drawing.Size(63, 20);
             this.ciblename.TabIndex = 1;
@@ -417,6 +418,7 @@
             // numnom
             // 
             this.numnom.Location = new System.Drawing.Point(233, 29);
+            this.numnom.MaxLength = 2;
             this.numnom.Name = "numnom";
             this.numnom.Size = new System.Drawing.Size(31, 20);
             this.numnom.TabIndex = 32;
@@ -555,11 +557,11 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(400, 565);
+            this.chargefichneocp.Location = new System.Drawing.Point(182, 566);
             this.chargefichneocp.Name = "chargefichneocp";
-            this.chargefichneocp.Size = new System.Drawing.Size(147, 23);
+            this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
             this.chargefichneocp.TabIndex = 46;
-            this.chargefichneocp.Text = "Génére et charge fichier NEOCP";
+            this.chargefichneocp.Text = "Génére et charge fichier NEOCP \\ PCCP";
             this.chargefichneocp.UseVisualStyleBackColor = true;
             this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
             // 
@@ -589,11 +591,22 @@
             this.emplregister.UseVisualStyleBackColor = true;
             this.emplregister.Click += new System.EventHandler(this.emplregister_Click);
             // 
+            // chargefich2neo
+            // 
+            this.chargefich2neo.Location = new System.Drawing.Point(448, 566);
+            this.chargefich2neo.Name = "chargefich2neo";
+            this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
+            this.chargefich2neo.TabIndex = 48;
+            this.chargefich2neo.Text = "Charge fichier NEOCP \\ PCCP";
+            this.chargefich2neo.UseVisualStyleBackColor = true;
+            this.chargefich2neo.Click += new System.EventHandler(this.chargefich2neo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 600);
+            this.Controls.Add(this.chargefich2neo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chargefichneocp);
             this.Controls.Add(this.richTextBox1);
@@ -700,6 +713,7 @@
         private System.Windows.Forms.Button chargefichneocp;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button emplregister;
+        private System.Windows.Forms.Button chargefich2neo;
     }
 }
 
