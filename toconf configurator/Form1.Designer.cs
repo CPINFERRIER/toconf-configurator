@@ -80,6 +80,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.emplregister = new System.Windows.Forms.Button();
             this.chargefich2neo = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.transf = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -309,7 +311,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(826, 566);
+            this.exit.Location = new System.Drawing.Point(699, 566);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -576,7 +578,7 @@
             this.groupBox1.Controls.Add(this.reset);
             this.groupBox1.Location = new System.Drawing.Point(503, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 254);
+            this.groupBox1.Size = new System.Drawing.Size(297, 254);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fonctions divers";
@@ -601,11 +603,30 @@
             this.chargefich2neo.UseVisualStyleBackColor = true;
             this.chargefich2neo.Click += new System.EventHandler(this.chargefich2neo_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(30, 341);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(554, 20);
+            this.textBox1.TabIndex = 49;
+            // 
+            // transf
+            // 
+            this.transf.Location = new System.Drawing.Point(613, 435);
+            this.transf.Name = "transf";
+            this.transf.Size = new System.Drawing.Size(187, 47);
+            this.transf.TabIndex = 50;
+            this.transf.Text = "Remplir AD et DEC";
+            this.transf.UseVisualStyleBackColor = true;
+            this.transf.Click += new System.EventHandler(this.transf_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 600);
+            this.ClientSize = new System.Drawing.Size(812, 599);
+            this.Controls.Add(this.transf);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.chargefich2neo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chargefichneocp);
@@ -714,6 +735,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button emplregister;
         private System.Windows.Forms.Button chargefich2neo;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button transf;
     }
 }
 

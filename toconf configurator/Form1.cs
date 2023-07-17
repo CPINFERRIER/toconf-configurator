@@ -382,6 +382,7 @@ namespace toconf_configurator
         // genere et charger le fichier text générer par le script python
         private void chargefichneocp_Click(object sender, EventArgs e)
         {
+            //selectionner fichier bat
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Fichiers Batch (*.bat)|*.bat";
             openFileDialog1.Title = "Sélectionner le fichier batch";
@@ -395,7 +396,7 @@ namespace toconf_configurator
             }
 
 
-
+            //selectionner fichier txt
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Fichiers texte (*.txt)|*.txt";
 
@@ -421,6 +422,7 @@ namespace toconf_configurator
             }
         }
 
+        //utiliser pour charger un fichier existant
         private void chargefich2neo_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -434,5 +436,51 @@ namespace toconf_configurator
                 richTextBox1.Text = contenuFichier;
             }
         }
+
+        //Transfere de la ligne selectionner dans les cases AD et DEC
+        private void transf_Click_1(object sender, EventArgs e)
+        //private void richTextBox1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int lineNumber = richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart);
+            string selectedLine = richTextBox1.Lines[lineNumber];
+            textBox1.Text = selectedLine;
+
+            string[] parts = selectedLine.Split('|');
+            if (parts.Length >= 9)
+            {
+                string contentAfterEighthPipe = parts[8].Trim();
+                // Découper la partie AD
+                if (contentAfterEighthPipe.Length >= 6)
+                {
+                    string part1 = contentAfterEighthPipe.Substring(0, 2).Replace(" ", "");
+                    string part2 = contentAfterEighthPipe.Substring(2, 3).Replace(" ", "");
+                    string part3 = contentAfterEighthPipe.Substring(5, 3).Replace(" ", "");
+
+                    //rentre les valeurs en AD
+                    adh.Text = part1;
+                    adm.Text = part2;
+                    ads.Text = part3;
+                }
+
+                string contentAfterEighthPipe1 = parts[9].Trim();
+                // Découper la partie DEC
+                if (contentAfterEighthPipe.Length >= 6)
+                {
+                    string part11 = contentAfterEighthPipe1.Substring(0, 1).Replace(" ", "");
+                    string part21 = contentAfterEighthPipe1.Substring(1, 3).Replace(" ", "");
+                    string part31 = contentAfterEighthPipe1.Substring(4, 3).Replace(" ", "");
+                    string part41 = contentAfterEighthPipe1.Substring(6, 3).Replace(" ", "");
+
+                    //rentre les valeurs en DEC
+                    decpm.Text = part11;
+                    dech.Text = part21;
+                    decm.Text = part31;
+                    decs.Text = part41;
+                }
+            }
+        }
+
+        
+        
     }
 }
