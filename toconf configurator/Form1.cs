@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -375,6 +377,20 @@ namespace toconf_configurator
         // charger le fichier text générer par le script python
         private void chargefichneocp_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Fichiers Batch (*.bat)|*.bat";
+            openFileDialog1.Title = "Sélectionner le fichier batch";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string batchFilePath = openFileDialog1.FileName;
+                Process.Start(batchFilePath);
+
+                Thread.Sleep(10000);
+            }
+
+
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Fichiers texte (*.txt)|*.txt";
 

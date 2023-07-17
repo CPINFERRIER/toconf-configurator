@@ -307,7 +307,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(808, 472);
+            this.exit.Location = new System.Drawing.Point(826, 566);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -548,17 +548,17 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(30, 367);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(879, 99);
+            this.richTextBox1.Size = new System.Drawing.Size(879, 192);
             this.richTextBox1.TabIndex = 45;
             this.richTextBox1.Text = "";
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(391, 472);
+            this.chargefichneocp.Location = new System.Drawing.Point(400, 565);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(147, 23);
             this.chargefichneocp.TabIndex = 46;
-            this.chargefichneocp.Text = "Charger fichier NEOCP";
+            this.chargefichneocp.Text = "Génére et charge fichier NEOCP";
             this.chargefichneocp.UseVisualStyleBackColor = true;
             this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
             // 
@@ -581,7 +581,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 520);
+            this.ClientSize = new System.Drawing.Size(939, 600);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.chargefichneocp);
             this.Controls.Add(this.richTextBox1);
