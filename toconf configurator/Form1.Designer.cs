@@ -450,7 +450,7 @@
             // 
             // genfiup
             // 
-            this.genfiup.Location = new System.Drawing.Point(80, 125);
+            this.genfiup.Location = new System.Drawing.Point(6, 99);
             this.genfiup.Name = "genfiup";
             this.genfiup.Size = new System.Drawing.Size(123, 52);
             this.genfiup.TabIndex = 35;
@@ -460,7 +460,7 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(126, 183);
+            this.reset.Location = new System.Drawing.Point(6, 225);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(156, 23);
             this.reset.TabIndex = 36;
@@ -520,7 +520,7 @@
             // 
             // genfiupall
             // 
-            this.genfiupall.Location = new System.Drawing.Point(209, 125);
+            this.genfiupall.Location = new System.Drawing.Point(135, 101);
             this.genfiupall.Name = "genfiupall";
             this.genfiupall.Size = new System.Drawing.Size(123, 52);
             this.genfiupall.TabIndex = 42;
@@ -576,10 +576,10 @@
             this.groupBox1.Controls.Add(this.reset);
             this.groupBox1.Location = new System.Drawing.Point(503, 69);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(406, 226);
+            this.groupBox1.Size = new System.Drawing.Size(406, 254);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fonctions";
+            this.groupBox1.Text = "Fonctions divers";
             // 
             // emplregister
             // 
