@@ -403,6 +403,15 @@ namespace toconf_configurator
             }
         }
 
-        
+        private void emplregister_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedPath = folderBrowserDialog.SelectedPath;
+                empl.Text = selectedPath + @"\";
+            }
+        }
     }
 }

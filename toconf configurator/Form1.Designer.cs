@@ -78,6 +78,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.chargefichneocp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.emplregister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -297,7 +298,7 @@
             // 
             // gen
             // 
-            this.gen.Location = new System.Drawing.Point(159, 19);
+            this.gen.Location = new System.Drawing.Point(6, 19);
             this.gen.Name = "gen";
             this.gen.Size = new System.Drawing.Size(98, 23);
             this.gen.TabIndex = 18;
@@ -317,7 +318,7 @@
             // 
             // genfi
             // 
-            this.genfi.Location = new System.Drawing.Point(159, 48);
+            this.genfi.Location = new System.Drawing.Point(110, 19);
             this.genfi.Name = "genfi";
             this.genfi.Size = new System.Drawing.Size(98, 23);
             this.genfi.TabIndex = 19;
@@ -405,7 +406,7 @@
             // 
             // charge
             // 
-            this.charge.Location = new System.Drawing.Point(159, 77);
+            this.charge.Location = new System.Drawing.Point(6, 57);
             this.charge.Name = "charge";
             this.charge.Size = new System.Drawing.Size(98, 23);
             this.charge.TabIndex = 17;
@@ -564,6 +565,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.emplregister);
             this.groupBox1.Controls.Add(this.gen);
             this.groupBox1.Controls.Add(this.genfi);
             this.groupBox1.Controls.Add(this.charge);
@@ -576,6 +578,16 @@
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fonctions";
+            // 
+            // emplregister
+            // 
+            this.emplregister.Location = new System.Drawing.Point(110, 57);
+            this.emplregister.Name = "emplregister";
+            this.emplregister.Size = new System.Drawing.Size(172, 23);
+            this.emplregister.TabIndex = 43;
+            this.emplregister.Text = "Emplacement d\'enregistrement";
+            this.emplregister.UseVisualStyleBackColor = true;
+            this.emplregister.Click += new System.EventHandler(this.emplregister_Click);
             // 
             // Form1
             // 
@@ -687,6 +699,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button chargefichneocp;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button emplregister;
     }
 }
 
