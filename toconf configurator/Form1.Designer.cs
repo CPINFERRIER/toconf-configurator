@@ -520,7 +520,7 @@
             // 
             // genfiupall
             // 
-            this.genfiupall.Location = new System.Drawing.Point(135, 101);
+            this.genfiupall.Location = new System.Drawing.Point(135, 99);
             this.genfiupall.Name = "genfiupall";
             this.genfiupall.Size = new System.Drawing.Size(123, 52);
             this.genfiupall.TabIndex = 42;
