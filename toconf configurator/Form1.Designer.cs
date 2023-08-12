@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.ciblename = new System.Windows.Forms.TextBox();
@@ -82,6 +83,8 @@
             this.chargefich2neo = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.transf = new System.Windows.Forms.Button();
+            this.texttime = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -613,19 +616,30 @@
             // 
             // transf
             // 
-            this.transf.Location = new System.Drawing.Point(613, 435);
+            this.transf.Location = new System.Drawing.Point(591, 420);
             this.transf.Name = "transf";
-            this.transf.Size = new System.Drawing.Size(187, 47);
+            this.transf.Size = new System.Drawing.Size(209, 47);
             this.transf.TabIndex = 50;
             this.transf.Text = "Remplir AD et DEC";
             this.transf.UseVisualStyleBackColor = true;
             this.transf.Click += new System.EventHandler(this.transf_Click_1);
+            // 
+            // texttime
+            // 
+            this.texttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.texttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texttime.Location = new System.Drawing.Point(591, 367);
+            this.texttime.Name = "texttime";
+            this.texttime.ReadOnly = true;
+            this.texttime.Size = new System.Drawing.Size(209, 47);
+            this.texttime.TabIndex = 51;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 599);
+            this.Controls.Add(this.texttime);
             this.Controls.Add(this.transf);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.chargefich2neo);
@@ -738,6 +752,8 @@
         private System.Windows.Forms.Button chargefich2neo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button transf;
+        private System.Windows.Forms.TextBox texttime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

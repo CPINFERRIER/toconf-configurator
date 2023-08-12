@@ -24,6 +24,9 @@ namespace toconf_configurator
         public Form1()
         {
             InitializeComponent();
+            timer1.Interval = 500; // Interval en millisecondes (1 seconde)
+            timer1.Tick += Timer1_Tick; // Associe l'événement Tick à la méthode Timer1_Tick
+            timer1.Start(); // Démarre le minuteur
         }
 
         // executer au chargement du programme
@@ -480,7 +483,12 @@ namespace toconf_configurator
             }
         }
 
-        
-        
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime heureTU = DateTime.UtcNow;
+            string heureFormattee = heureTU.ToString("HH:mm:ss" + " " + "TU");
+            texttime.Text = heureFormattee;
+        }
+
     }
 }
