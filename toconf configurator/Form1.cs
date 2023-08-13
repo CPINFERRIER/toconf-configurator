@@ -501,5 +501,67 @@ namespace toconf_configurator
             texttime.Text = heureFormattee;
         }
 
+        private void ajoutlist_Click(object sender, EventArgs e)
+        {
+            string ligneTexte1 = heureshoot.Text + "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+                                adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
+                                decs.Text + ".0" + "                      " + obscde.Text;
+
+            listeconfirm.Items.Add(ligneTexte1); // Ajoute la ligne à la ListBox
+
+            int AA = int.Parse(numnom.Text);
+            int BB = int.Parse(label11.Text);
+            int CC = AA + BB;
+            numnom.Text = CC.ToString("D2");
+
+        }
+
+        private void chargvaleur_Click(object sender, EventArgs e)
+        {
+            if (listeconfirm.SelectedIndex >= 0) // Vérifier si une ligne est sélectionnée
+            {
+                string selectedLine = listeconfirm.SelectedItem.ToString();
+                MessageBox.Show("Ligne sélectionnée : " + selectedLine); // Message de débogage
+                string[] param = selectedLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                
+                    heureshoot.Text = param[0];
+                    string nomcible = param[1]; // CHM1003
+                    string ciblenameValue = nomcible.Substring(0, 5); // CHM10
+                    string numnomValue = nomcible.Substring(5); // 03
+                    ciblename.Text = ciblenameValue;
+                    numnom.Text = numnomValue;
+                    string year1 = param[2];
+                    string yearok = year1.Substring(2);
+                    year.Text = yearok;
+                    day.Text = param[3];
+                    string mount1 = param[4];
+                    string mountok = mount1.Substring(0, 2);
+                    mount.Text = mountok;
+                    adh.Text = param[5];
+                    adm.Text = param[6];
+                    string ads1 = param[7];
+                    string adsok = ads1.Substring(0, 2);
+                    ads.Text = adsok;
+                    string dech1 = param[8];
+                    string decpmok = dech1.Substring(0, 1);
+                    string dechok = dech1.Substring(1, 2);
+                    decpm.Text = decpmok;
+                    dech.Text = dechok;
+                    decm.Text = param[9];
+                    string decs1 = param[10];
+                    string decsok = decs1.Substring(0, 2);
+                    decs.Text = decsok;
+                    obscde.Text = param[11];
+
+
+
+                int A = int.Parse(nametxt1.Text);
+                int B = int.Parse(label11.Text);
+                int C = A + B;
+                nametxt1.Text = C.ToString("D2");
+
+            }
+        }
     }
 }
+

@@ -88,6 +88,10 @@
             this.heureshoot = new System.Windows.Forms.TextBox();
             this.heurshoo = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listeconfirm = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ajoutlist = new System.Windows.Forms.Button();
+            this.chargvaleur = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -317,7 +321,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(699, 566);
+            this.exit.Location = new System.Drawing.Point(703, 758);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -668,11 +672,52 @@
             this.textBox2.Text = "TU";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // listeconfirm
+            // 
+            this.listeconfirm.FormattingEnabled = true;
+            this.listeconfirm.Location = new System.Drawing.Point(30, 641);
+            this.listeconfirm.Name = "listeconfirm";
+            this.listeconfirm.Size = new System.Drawing.Size(553, 108);
+            this.listeconfirm.TabIndex = 55;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(28, 625);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(165, 13);
+            this.label14.TabIndex = 56;
+            this.label14.Text = "Liste de confirmation automatique";
+            // 
+            // ajoutlist
+            // 
+            this.ajoutlist.Location = new System.Drawing.Point(627, 641);
+            this.ajoutlist.Name = "ajoutlist";
+            this.ajoutlist.Size = new System.Drawing.Size(144, 23);
+            this.ajoutlist.TabIndex = 57;
+            this.ajoutlist.Text = "Ajouter ligne dans la liste";
+            this.ajoutlist.UseVisualStyleBackColor = true;
+            this.ajoutlist.Click += new System.EventHandler(this.ajoutlist_Click);
+            // 
+            // chargvaleur
+            // 
+            this.chargvaleur.Location = new System.Drawing.Point(628, 670);
+            this.chargvaleur.Name = "chargvaleur";
+            this.chargvaleur.Size = new System.Drawing.Size(143, 24);
+            this.chargvaleur.TabIndex = 58;
+            this.chargvaleur.Text = "Charger ligne selectionner";
+            this.chargvaleur.UseVisualStyleBackColor = true;
+            this.chargvaleur.Click += new System.EventHandler(this.chargvaleur_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 599);
+            this.ClientSize = new System.Drawing.Size(816, 793);
+            this.Controls.Add(this.chargvaleur);
+            this.Controls.Add(this.ajoutlist);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.listeconfirm);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.heureshoot);
             this.Controls.Add(this.heurshoo);
@@ -794,6 +839,10 @@
         private System.Windows.Forms.TextBox heureshoot;
         private System.Windows.Forms.Label heurshoo;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listeconfirm;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button ajoutlist;
+        private System.Windows.Forms.Button chargvaleur;
     }
 }
 
