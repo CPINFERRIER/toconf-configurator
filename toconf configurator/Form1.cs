@@ -524,8 +524,7 @@ namespace toconf_configurator
         {
             if (listeconfirm.SelectedIndex >= 0) // Vérifier si une ligne est sélectionnée
             {
-                string selectedLine = listeconfirm.SelectedItem.ToString();
-                MessageBox.Show("Ligne sélectionnée : " + selectedLine); // Message de débogage
+                string selectedLine = listeconfirm.SelectedItem.ToString();                
                 string[] param = selectedLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 
                     heureshoot.Text = param[0];
