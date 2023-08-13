@@ -480,13 +480,24 @@ namespace toconf_configurator
                     decm.Text = part31;
                     decs.Text = part41;
                 }
+
+                string contentAfterEighthPipe2 = parts[3].Trim();
+                // Découper la partie heure de shoot
+                if (contentAfterEighthPipe.Length >= 6)
+                {
+                    string part51 = contentAfterEighthPipe2.Substring(0, 2).Replace(" ", "");
+                    string part61 = contentAfterEighthPipe2.Substring(2, 2).Replace(" ", "");
+
+                    //rentre la valeur d'heure de shoot
+                    heureshoot.Text = part51 + ":" + part61;                    
+                }
             }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             DateTime heureTU = DateTime.UtcNow;
-            string heureFormattee = heureTU.ToString("HH:mm:ss" + " " + "TU");
+            string heureFormattee = heureTU.ToString("HH:mm");
             texttime.Text = heureFormattee;
         }
 
