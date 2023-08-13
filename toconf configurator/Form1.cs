@@ -494,6 +494,7 @@ namespace toconf_configurator
             }
         }
 
+        //calcul l'heure TU et la rentre dans un textbox
         private void Timer1_Tick(object sender, EventArgs e)
         {
             DateTime heureTU = DateTime.UtcNow;
@@ -501,6 +502,7 @@ namespace toconf_configurator
             texttime.Text = heureFormattee;
         }
 
+        // ajoute ce qui est dans les différentes lignes dans la liste d'objets a confirmer dans la nuit et incrémente le numéro de cible
         private void ajoutlist_Click(object sender, EventArgs e)
         {
             string ligneTexte1 = heureshoot.Text + "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
@@ -516,6 +518,8 @@ namespace toconf_configurator
 
         }
 
+
+        // renvoie la ligne selectionner dans chaque case pour générer le fichier de shoot et incrémente le numéro de fichier de cible
         private void chargvaleur_Click(object sender, EventArgs e)
         {
             if (listeconfirm.SelectedIndex >= 0) // Vérifier si une ligne est sélectionnée
