@@ -566,6 +566,20 @@ namespace toconf_configurator
 
             }
         }
+
+        // Supprimer la dernière ligne ajoutée dans une ListBox
+        private void supline_Click(object sender, EventArgs e)
+        {           
+            if (listeconfirm.Items.Count > 0)
+            {
+                listeconfirm.Items.RemoveAt(listeconfirm.Items.Count - 1);
+            }
+
+            int AA = int.Parse(numnom.Text);
+            int BB = int.Parse(label11.Text);
+            int CC = AA - BB;
+            numnom.Text = CC.ToString("D2");
+        }
     }
 }
 

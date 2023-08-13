@@ -92,6 +92,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.ajoutlist = new System.Windows.Forms.Button();
             this.chargvaleur = new System.Windows.Forms.Button();
+            this.supline = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -701,19 +702,30 @@
             // 
             // chargvaleur
             // 
-            this.chargvaleur.Location = new System.Drawing.Point(628, 670);
+            this.chargvaleur.Location = new System.Drawing.Point(627, 670);
             this.chargvaleur.Name = "chargvaleur";
-            this.chargvaleur.Size = new System.Drawing.Size(143, 24);
+            this.chargvaleur.Size = new System.Drawing.Size(144, 24);
             this.chargvaleur.TabIndex = 58;
             this.chargvaleur.Text = "Charger ligne selectionner";
             this.chargvaleur.UseVisualStyleBackColor = true;
             this.chargvaleur.Click += new System.EventHandler(this.chargvaleur_Click);
+            // 
+            // supline
+            // 
+            this.supline.Location = new System.Drawing.Point(627, 700);
+            this.supline.Name = "supline";
+            this.supline.Size = new System.Drawing.Size(144, 24);
+            this.supline.TabIndex = 59;
+            this.supline.Text = "Supprimer la derniére ligne";
+            this.supline.UseVisualStyleBackColor = true;
+            this.supline.Click += new System.EventHandler(this.supline_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 793);
+            this.Controls.Add(this.supline);
             this.Controls.Add(this.chargvaleur);
             this.Controls.Add(this.ajoutlist);
             this.Controls.Add(this.label14);
@@ -843,6 +855,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button ajoutlist;
         private System.Windows.Forms.Button chargvaleur;
+        private System.Windows.Forms.Button supline;
     }
 }
 
