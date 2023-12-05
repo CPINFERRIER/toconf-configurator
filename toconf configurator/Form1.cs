@@ -63,7 +63,7 @@ namespace toconf_configurator
             ext.Text = "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " + 
                 adh.Text + " " + adm.Text + " " + ads.Text +".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                 decs.Text +".0" + "                      " + obscde.Text + " ";
-            Clipboard.SetText(ext.Text);
+            Clipboard.SetText(ext.Text); 
         }
 
         // bouton quitter le programme
