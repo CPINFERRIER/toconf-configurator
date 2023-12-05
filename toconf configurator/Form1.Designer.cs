@@ -74,7 +74,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.genfiupall = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.resad = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.chargefichneocp = new System.Windows.Forms.Button();
@@ -93,8 +92,9 @@
             this.ajoutlist = new System.Windows.Forms.Button();
             this.chargvaleur = new System.Windows.Forms.Button();
             this.supline = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -541,15 +541,6 @@
             this.genfiupall.UseVisualStyleBackColor = true;
             this.genfiupall.Click += new System.EventHandler(this.genfiupall_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::toconf_configurator.Properties.Resources.ilustração_asteroide_do_ícone_79627728___Copie;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 81);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 62);
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            // 
             // resad
             // 
             this.resad.Location = new System.Drawing.Point(371, 169);
@@ -720,6 +711,15 @@
             this.supline.UseVisualStyleBackColor = true;
             this.supline.Click += new System.EventHandler(this.supline_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::toconf_configurator.Properties.Resources.toshootpetit;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 62);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -784,8 +784,8 @@
             this.Name = "Form1";
             this.Text = "toconf Generator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

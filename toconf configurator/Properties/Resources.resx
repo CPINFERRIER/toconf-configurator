@@ -121,4 +121,7 @@
   <data name="ilustração-asteroide-do-ícone-79627728 - Copie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ilustração-asteroide-do-ícone-79627728 - Copie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="toshootpetit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toshootpetit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

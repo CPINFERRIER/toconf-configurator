@@ -64,7 +64,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ilustração-asteroide-do-ícone-79627728.ico</ApplicationIcon>
+    <ApplicationIcon>toshoot.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -133,6 +133,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ilustração-asteroide-do-ícone-79627728.ico" />
+    <Content Include="toshoot.ico" />
+    <None Include="Resources\toshootpetit.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
