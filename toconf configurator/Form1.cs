@@ -515,7 +515,6 @@ namespace toconf_configurator
             int BB = int.Parse(label11.Text);
             int CC = AA + BB;
             numnom.Text = CC.ToString("D2");
-                       
 
         }
 
@@ -579,7 +578,6 @@ namespace toconf_configurator
             int BB = int.Parse(label11.Text);
             int CC = AA - BB;
             numnom.Text = CC.ToString("D2");
-          
         }
     }
 }
