@@ -583,7 +583,7 @@ namespace toconf_configurator
             if (listeconfirm.SelectedIndex != -1)
             {
                 // Supprimez l'élément sélectionné de la ListBox
-                listeconfirm.Items.RemoveAt(listeconfirm.SelectedIndex);
+                listeconfirm.Items.RemoveAt(listeconfirm.SelectedIndex); 
             }
             else
             {
