@@ -576,6 +576,20 @@ namespace toconf_configurator
             int CC = AA - BB;
             numnom.Text = CC.ToString("D2");
         }
+
+        private void supline1_Click(object sender, EventArgs e)
+        {
+            // Assurez-vous qu'au moins un élément est sélectionné
+            if (listeconfirm.SelectedIndex != -1)
+            {
+                // Supprimez l'élément sélectionné de la ListBox
+                listeconfirm.Items.RemoveAt(listeconfirm.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à supprimer.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 

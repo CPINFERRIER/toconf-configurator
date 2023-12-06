@@ -93,6 +93,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.supline1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -536,7 +537,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(30, 352);
+            this.richTextBox1.Location = new System.Drawing.Point(31, 333);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(554, 192);
             this.richTextBox1.TabIndex = 45;
@@ -544,7 +545,7 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(30, 550);
+            this.chargefichneocp.Location = new System.Drawing.Point(31, 531);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -579,7 +580,7 @@
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(325, 550);
+            this.chargefich2neo.Location = new System.Drawing.Point(326, 531);
             this.chargefich2neo.Name = "chargefich2neo";
             this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
             this.chargefich2neo.TabIndex = 48;
@@ -597,7 +598,7 @@
             // 
             // transf
             // 
-            this.transf.Location = new System.Drawing.Point(595, 416);
+            this.transf.Location = new System.Drawing.Point(596, 397);
             this.transf.Name = "transf";
             this.transf.Size = new System.Drawing.Size(209, 47);
             this.transf.TabIndex = 50;
@@ -609,7 +610,7 @@
             // 
             this.texttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.texttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttime.Location = new System.Drawing.Point(606, 352);
+            this.texttime.Location = new System.Drawing.Point(607, 333);
             this.texttime.Name = "texttime";
             this.texttime.ReadOnly = true;
             this.texttime.Size = new System.Drawing.Size(132, 47);
@@ -638,7 +639,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(733, 352);
+            this.textBox2.Location = new System.Drawing.Point(734, 333);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(58, 47);
@@ -649,7 +650,7 @@
             // listeconfirm
             // 
             this.listeconfirm.FormattingEnabled = true;
-            this.listeconfirm.Location = new System.Drawing.Point(30, 606);
+            this.listeconfirm.Location = new System.Drawing.Point(30, 587);
             this.listeconfirm.Name = "listeconfirm";
             this.listeconfirm.Size = new System.Drawing.Size(553, 108);
             this.listeconfirm.TabIndex = 55;
@@ -657,7 +658,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 590);
+            this.label14.Location = new System.Drawing.Point(28, 571);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(165, 13);
             this.label14.TabIndex = 56;
@@ -665,7 +666,7 @@
             // 
             // ajoutlist
             // 
-            this.ajoutlist.Location = new System.Drawing.Point(627, 607);
+            this.ajoutlist.Location = new System.Drawing.Point(627, 588);
             this.ajoutlist.Name = "ajoutlist";
             this.ajoutlist.Size = new System.Drawing.Size(144, 23);
             this.ajoutlist.TabIndex = 57;
@@ -675,17 +676,17 @@
             // 
             // chargvaleur
             // 
-            this.chargvaleur.Location = new System.Drawing.Point(627, 636);
+            this.chargvaleur.Location = new System.Drawing.Point(627, 617);
             this.chargvaleur.Name = "chargvaleur";
             this.chargvaleur.Size = new System.Drawing.Size(144, 24);
             this.chargvaleur.TabIndex = 58;
-            this.chargvaleur.Text = "Charger ligne selectionner";
+            this.chargvaleur.Text = "Charger ligne select";
             this.chargvaleur.UseVisualStyleBackColor = true;
             this.chargvaleur.Click += new System.EventHandler(this.chargvaleur_Click);
             // 
             // supline
             // 
-            this.supline.Location = new System.Drawing.Point(627, 666);
+            this.supline.Location = new System.Drawing.Point(627, 647);
             this.supline.Name = "supline";
             this.supline.Size = new System.Drawing.Size(144, 24);
             this.supline.TabIndex = 59;
@@ -705,7 +706,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(31, 336);
+            this.label15.Location = new System.Drawing.Point(32, 317);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(140, 13);
             this.label15.TabIndex = 60;
@@ -722,11 +723,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Générer fichier à la suite";
             // 
+            // supline1
+            // 
+            this.supline1.Location = new System.Drawing.Point(627, 677);
+            this.supline1.Name = "supline1";
+            this.supline1.Size = new System.Drawing.Size(144, 23);
+            this.supline1.TabIndex = 62;
+            this.supline1.Text = "Supprimer ligne select";
+            this.supline1.UseVisualStyleBackColor = true;
+            this.supline1.Click += new System.EventHandler(this.supline1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 755);
+            this.Controls.Add(this.supline1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.supline);
@@ -859,6 +871,7 @@
         private System.Windows.Forms.Button supline;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button supline1;
     }
 }
 
