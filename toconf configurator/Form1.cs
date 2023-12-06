@@ -561,6 +561,10 @@ namespace toconf_configurator
                 nametxt1.Text = C.ToString("D2");
 
             }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne à charger.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         // Supprimer la dernière ligne ajoutée dans une ListBox
@@ -569,12 +573,19 @@ namespace toconf_configurator
             if (listeconfirm.Items.Count > 0)
             {
                 listeconfirm.Items.RemoveAt(listeconfirm.Items.Count - 1);
+
+                int AA = int.Parse(numnom.Text);
+                int BB = int.Parse(label11.Text);
+                int CC = AA - BB;
+                numnom.Text = CC.ToString("D2");
             }
 
-            int AA = int.Parse(numnom.Text);
-            int BB = int.Parse(label11.Text);
-            int CC = AA - BB;
-            numnom.Text = CC.ToString("D2");
+            else
+            {
+                MessageBox.Show("Pas de ligne à supprimer.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            
         }
 
         private void supline1_Click(object sender, EventArgs e)
