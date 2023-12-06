@@ -51,7 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.obscde = new System.Windows.Forms.TextBox();
             this.ext = new System.Windows.Forms.TextBox();
-            this.gen = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.genfi = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -93,8 +92,11 @@
             this.chargvaleur = new System.Windows.Forms.Button();
             this.supline = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -304,25 +306,15 @@
             // 
             // ext
             // 
-            this.ext.Location = new System.Drawing.Point(30, 230);
+            this.ext.Location = new System.Drawing.Point(30, 254);
             this.ext.Name = "ext";
             this.ext.ReadOnly = true;
             this.ext.Size = new System.Drawing.Size(410, 20);
             this.ext.TabIndex = 22;
             // 
-            // gen
-            // 
-            this.gen.Location = new System.Drawing.Point(6, 19);
-            this.gen.Name = "gen";
-            this.gen.Size = new System.Drawing.Size(98, 23);
-            this.gen.TabIndex = 18;
-            this.gen.Text = "Générer ligne";
-            this.gen.UseVisualStyleBackColor = true;
-            this.gen.Click += new System.EventHandler(this.gen_Click);
-            // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(703, 758);
+            this.exit.Location = new System.Drawing.Point(703, 723);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -332,7 +324,7 @@
             // 
             // genfi
             // 
-            this.genfi.Location = new System.Drawing.Point(110, 19);
+            this.genfi.Location = new System.Drawing.Point(6, 18);
             this.genfi.Name = "genfi";
             this.genfi.Size = new System.Drawing.Size(98, 23);
             this.genfi.TabIndex = 19;
@@ -343,7 +335,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(80, 310);
+            this.label9.Location = new System.Drawing.Point(80, 223);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 25;
@@ -351,7 +343,7 @@
             // 
             // nametxt
             // 
-            this.nametxt.Location = new System.Drawing.Point(164, 307);
+            this.nametxt.Location = new System.Drawing.Point(164, 220);
             this.nametxt.Name = "nametxt";
             this.nametxt.Size = new System.Drawing.Size(63, 20);
             this.nametxt.TabIndex = 13;
@@ -361,7 +353,7 @@
             // 
             // empl
             // 
-            this.empl.Location = new System.Drawing.Point(208, 275);
+            this.empl.Location = new System.Drawing.Point(9, 134);
             this.empl.Name = "empl";
             this.empl.Size = new System.Drawing.Size(174, 20);
             this.empl.TabIndex = 21;
@@ -370,15 +362,15 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(52, 278);
+            this.label10.Location = new System.Drawing.Point(6, 110);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 13);
+            this.label10.Size = new System.Drawing.Size(87, 13);
             this.label10.TabIndex = 28;
-            this.label10.Text = "Emplacement d\'enregistrement";
+            this.label10.Text = "Directory to save";
             // 
             // nametxt1
             // 
-            this.nametxt1.Location = new System.Drawing.Point(233, 307);
+            this.nametxt1.Location = new System.Drawing.Point(233, 220);
             this.nametxt1.Name = "nametxt1";
             this.nametxt1.Size = new System.Drawing.Size(31, 20);
             this.nametxt1.TabIndex = 14;
@@ -389,7 +381,7 @@
             // up
             // 
             this.up.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.up.Location = new System.Drawing.Point(270, 307);
+            this.up.Location = new System.Drawing.Point(270, 220);
             this.up.Name = "up";
             this.up.Size = new System.Drawing.Size(25, 21);
             this.up.TabIndex = 15;
@@ -400,7 +392,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(332, 310);
+            this.label11.Location = new System.Drawing.Point(332, 223);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 31;
@@ -410,7 +402,7 @@
             // down
             // 
             this.down.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.down.Location = new System.Drawing.Point(301, 307);
+            this.down.Location = new System.Drawing.Point(301, 220);
             this.down.Name = "down";
             this.down.Size = new System.Drawing.Size(25, 21);
             this.down.TabIndex = 16;
@@ -420,7 +412,7 @@
             // 
             // charge
             // 
-            this.charge.Location = new System.Drawing.Point(6, 57);
+            this.charge.Location = new System.Drawing.Point(6, 50);
             this.charge.Name = "charge";
             this.charge.Size = new System.Drawing.Size(98, 23);
             this.charge.TabIndex = 17;
@@ -463,7 +455,7 @@
             // 
             // genfiup
             // 
-            this.genfiup.Location = new System.Drawing.Point(6, 99);
+            this.genfiup.Location = new System.Drawing.Point(23, 19);
             this.genfiup.Name = "genfiup";
             this.genfiup.Size = new System.Drawing.Size(123, 52);
             this.genfiup.TabIndex = 35;
@@ -473,9 +465,9 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(6, 225);
+            this.reset.Location = new System.Drawing.Point(124, 18);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(156, 23);
+            this.reset.Size = new System.Drawing.Size(156, 24);
             this.reset.TabIndex = 36;
             this.reset.Text = "Reset num fichier et cible";
             this.reset.UseVisualStyleBackColor = true;
@@ -533,7 +525,7 @@
             // 
             // genfiupall
             // 
-            this.genfiupall.Location = new System.Drawing.Point(135, 99);
+            this.genfiupall.Location = new System.Drawing.Point(152, 19);
             this.genfiupall.Name = "genfiupall";
             this.genfiupall.Size = new System.Drawing.Size(123, 52);
             this.genfiupall.TabIndex = 42;
@@ -553,7 +545,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(30, 367);
+            this.richTextBox1.Location = new System.Drawing.Point(30, 352);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(554, 192);
             this.richTextBox1.TabIndex = 45;
@@ -561,7 +553,7 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(31, 566);
+            this.chargefichneocp.Location = new System.Drawing.Point(30, 550);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -571,33 +563,32 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.emplregister);
-            this.groupBox1.Controls.Add(this.gen);
             this.groupBox1.Controls.Add(this.genfi);
             this.groupBox1.Controls.Add(this.charge);
-            this.groupBox1.Controls.Add(this.genfiupall);
-            this.groupBox1.Controls.Add(this.genfiup);
+            this.groupBox1.Controls.Add(this.emplregister);
             this.groupBox1.Controls.Add(this.reset);
-            this.groupBox1.Location = new System.Drawing.Point(503, 69);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.empl);
+            this.groupBox1.Location = new System.Drawing.Point(507, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 254);
+            this.groupBox1.Size = new System.Drawing.Size(297, 160);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fonctions divers";
             // 
             // emplregister
             // 
-            this.emplregister.Location = new System.Drawing.Point(110, 57);
+            this.emplregister.Location = new System.Drawing.Point(99, 105);
             this.emplregister.Name = "emplregister";
-            this.emplregister.Size = new System.Drawing.Size(172, 23);
+            this.emplregister.Size = new System.Drawing.Size(108, 23);
             this.emplregister.TabIndex = 43;
-            this.emplregister.Text = "Emplacement d\'enregistrement";
+            this.emplregister.Text = "Choice of Directory";
             this.emplregister.UseVisualStyleBackColor = true;
             this.emplregister.Click += new System.EventHandler(this.emplregister_Click);
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(326, 566);
+            this.chargefich2neo.Location = new System.Drawing.Point(325, 550);
             this.chargefich2neo.Name = "chargefich2neo";
             this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
             this.chargefich2neo.TabIndex = 48;
@@ -607,7 +598,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 341);
+            this.textBox1.Location = new System.Drawing.Point(30, 280);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(554, 20);
@@ -615,7 +606,7 @@
             // 
             // transf
             // 
-            this.transf.Location = new System.Drawing.Point(591, 420);
+            this.transf.Location = new System.Drawing.Point(595, 416);
             this.transf.Name = "transf";
             this.transf.Size = new System.Drawing.Size(209, 47);
             this.transf.TabIndex = 50;
@@ -627,7 +618,7 @@
             // 
             this.texttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.texttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttime.Location = new System.Drawing.Point(603, 367);
+            this.texttime.Location = new System.Drawing.Point(606, 352);
             this.texttime.Name = "texttime";
             this.texttime.ReadOnly = true;
             this.texttime.Size = new System.Drawing.Size(132, 47);
@@ -656,7 +647,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(730, 367);
+            this.textBox2.Location = new System.Drawing.Point(733, 352);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(58, 47);
@@ -667,7 +658,7 @@
             // listeconfirm
             // 
             this.listeconfirm.FormattingEnabled = true;
-            this.listeconfirm.Location = new System.Drawing.Point(30, 641);
+            this.listeconfirm.Location = new System.Drawing.Point(30, 606);
             this.listeconfirm.Name = "listeconfirm";
             this.listeconfirm.Size = new System.Drawing.Size(553, 108);
             this.listeconfirm.TabIndex = 55;
@@ -675,7 +666,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 625);
+            this.label14.Location = new System.Drawing.Point(28, 590);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(165, 13);
             this.label14.TabIndex = 56;
@@ -683,7 +674,7 @@
             // 
             // ajoutlist
             // 
-            this.ajoutlist.Location = new System.Drawing.Point(627, 641);
+            this.ajoutlist.Location = new System.Drawing.Point(627, 607);
             this.ajoutlist.Name = "ajoutlist";
             this.ajoutlist.Size = new System.Drawing.Size(144, 23);
             this.ajoutlist.TabIndex = 57;
@@ -693,7 +684,7 @@
             // 
             // chargvaleur
             // 
-            this.chargvaleur.Location = new System.Drawing.Point(627, 670);
+            this.chargvaleur.Location = new System.Drawing.Point(627, 636);
             this.chargvaleur.Name = "chargvaleur";
             this.chargvaleur.Size = new System.Drawing.Size(144, 24);
             this.chargvaleur.TabIndex = 58;
@@ -703,7 +694,7 @@
             // 
             // supline
             // 
-            this.supline.Location = new System.Drawing.Point(627, 700);
+            this.supline.Location = new System.Drawing.Point(627, 666);
             this.supline.Name = "supline";
             this.supline.Size = new System.Drawing.Size(144, 24);
             this.supline.TabIndex = 59;
@@ -720,11 +711,33 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(31, 336);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 13);
+            this.label15.TabIndex = 60;
+            this.label15.Text = "Liste d\'objets neocp et pccp";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.genfiup);
+            this.groupBox2.Controls.Add(this.genfiupall);
+            this.groupBox2.Location = new System.Drawing.Point(507, 178);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(297, 88);
+            this.groupBox2.TabIndex = 61;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Générer fichier à la suite";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 793);
+            this.ClientSize = new System.Drawing.Size(816, 755);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.supline);
             this.Controls.Add(this.chargvaleur);
             this.Controls.Add(this.ajoutlist);
@@ -754,8 +767,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.up);
             this.Controls.Add(this.nametxt1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.empl);
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.exit);
@@ -785,7 +796,9 @@
             this.Text = "toconf Generator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -814,7 +827,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox obscde;
         private System.Windows.Forms.TextBox ext;
-        private System.Windows.Forms.Button gen;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button genfi;
         private System.Windows.Forms.Label label9;
@@ -856,6 +868,8 @@
         private System.Windows.Forms.Button ajoutlist;
         private System.Windows.Forms.Button chargvaleur;
         private System.Windows.Forms.Button supline;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
