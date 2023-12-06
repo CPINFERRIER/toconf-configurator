@@ -50,7 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.obscde = new System.Windows.Forms.TextBox();
-            this.ext = new System.Windows.Forms.TextBox();
             this.exit = new System.Windows.Forms.Button();
             this.genfi = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -303,14 +302,6 @@
             this.obscde.Text = "M10";
             this.obscde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.obscde.TextChanged += new System.EventHandler(this.gen_Click);
-            // 
-            // ext
-            // 
-            this.ext.Location = new System.Drawing.Point(30, 254);
-            this.ext.Name = "ext";
-            this.ext.ReadOnly = true;
-            this.ext.Size = new System.Drawing.Size(410, 20);
-            this.ext.TabIndex = 22;
             // 
             // exit
             // 
@@ -770,7 +761,6 @@
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.ext);
             this.Controls.Add(this.obscde);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -826,7 +816,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox obscde;
-        private System.Windows.Forms.TextBox ext;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button genfi;
         private System.Windows.Forms.Label label9;
