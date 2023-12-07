@@ -351,14 +351,14 @@
             // 
             this.empl.Location = new System.Drawing.Point(9, 134);
             this.empl.Name = "empl";
-            this.empl.Size = new System.Drawing.Size(174, 20);
+            this.empl.Size = new System.Drawing.Size(282, 20);
             this.empl.TabIndex = 21;
             this.empl.Text = "C:\\Users\\cyril\\Desktop\\";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 110);
+            this.label10.Location = new System.Drawing.Point(40, 110);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 13);
             this.label10.TabIndex = 28;
@@ -574,7 +574,7 @@
             // 
             // emplregister
             // 
-            this.emplregister.Location = new System.Drawing.Point(99, 105);
+            this.emplregister.Location = new System.Drawing.Point(152, 105);
             this.emplregister.Name = "emplregister";
             this.emplregister.Size = new System.Drawing.Size(108, 23);
             this.emplregister.TabIndex = 43;
