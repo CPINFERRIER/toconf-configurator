@@ -96,8 +96,6 @@
             this.supline1 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.nomneocp = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -756,30 +754,11 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
-            // nomneocp
-            // 
-            this.nomneocp.Location = new System.Drawing.Point(164, 246);
-            this.nomneocp.Name = "nomneocp";
-            this.nomneocp.Size = new System.Drawing.Size(63, 20);
-            this.nomneocp.TabIndex = 64;
-            this.nomneocp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(80, 249);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 13);
-            this.label16.TabIndex = 65;
-            this.label16.Text = "Nom NEOCP";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 755);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.nomneocp);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.supline1);
             this.Controls.Add(this.groupBox2);
@@ -917,8 +896,6 @@
         private System.Windows.Forms.Button supline1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox nomneocp;
-        private System.Windows.Forms.Label label16;
     }
 }
 

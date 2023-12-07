@@ -123,10 +123,11 @@ namespace toconf_configurator
         //bouton qui génére le fichier texte
         private void genfi_Click(object sender, EventArgs e)
         {
+            
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
             File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text + " " + nomneocp.Text);
+                decs.Text + ".0" + "                      " + obscde.Text + " " );
          
         }
 
@@ -193,7 +194,7 @@ namespace toconf_configurator
         //bouton qui génére le fichier de sortie et qui incrémente de 1 le nom, de 1 le fichier de sortie 
         private void genfiup_Click(object sender, EventArgs e)
         {
-
+            
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
             //verifie si le fichier existe deja 
             string path = empl.Text + fileName;
@@ -221,7 +222,7 @@ namespace toconf_configurator
 
                 File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                     adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                    decs.Text + ".0" + "                      " + obscde.Text + " " + nomneocp.Text);
+                    decs.Text + ".0" + "                      " + obscde.Text + " " );
 
                 //monte de + 1 le nom du fichier de sortie
                 int A = int.Parse(nametxt1.Text);
@@ -299,6 +300,7 @@ namespace toconf_configurator
         //bouton qui génére le fichier de sortie et qui incrémente de 1 le nom, de 1 le fichier de sortie et de +XX en minute la valeur AD
         private void genfiupall_Click(object sender, EventArgs e)
         {
+            
             string fileName = nametxt.Text + nametxt1.Text + ".txt";
             //vérifie si le fichier existe déja 
             string path = empl.Text + fileName;
@@ -348,7 +350,7 @@ namespace toconf_configurator
             {
                 File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                decs.Text + ".0" + "                      " + obscde.Text + " " + nomneocp.Text);
+                decs.Text + ".0" + "                      " + obscde.Text + " ");
 
                 //monte de + 1 le nom du fichier de sortie
                 int A = int.Parse(nametxt1.Text);
@@ -504,16 +506,7 @@ namespace toconf_configurator
                     heureshoot.Text = part51 + ":" + part61;                    
                 }
 
-                string contentAfterEighthPipe4 = parts[1].Trim();
-                // Découper la partie heure de shoot
-                if (contentAfterEighthPipe.Length >= 6)
-                {
-                    string part71 = contentAfterEighthPipe4.Substring(0, 7).Replace(" ", "");
-
-
-                    //rentre la valeur d'heure de shoot
-                    nomneocp.Text = part71;
-                }
+                
             }
             
         }
@@ -529,9 +522,10 @@ namespace toconf_configurator
         // ajoute ce qui est dans les différentes lignes dans la liste d'objets a confirmer dans la nuit et incrémente le numéro de cible
         private void ajoutlist_Click(object sender, EventArgs e)
         {
+            
             string ligneTexte1 = heureshoot.Text + "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                                decs.Text + ".0" + "                      " + obscde.Text + "                      " + nomneocp.Text;
+                                decs.Text + ".0" + "                      " + obscde.Text + " ";
 
             listeconfirm.Items.Add(ligneTexte1); // Ajoute la ligne à la ListBox
 
@@ -579,7 +573,7 @@ namespace toconf_configurator
                     string decsok = decs1.Substring(0, 2);
                     decs.Text = decsok;
                     obscde.Text = param[11];
-                    nomneocp.Text = param[12];
+                    
 
 
 
@@ -710,13 +704,14 @@ namespace toconf_configurator
                         string decsok = decs1.Substring(0, 2);
                         decs.Text = decsok;
                         obscde.Text = param[11];
-                                                   
 
-                        //génére le fichier toconf
-                        string fileName = nametxt.Text + nametxt1.Text + ".txt";
+
+                            //génére le fichier toconf
+                            
+                            string fileName = nametxt.Text + nametxt1.Text + ".txt";
                         File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                             adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
-                            decs.Text + ".0" + "                      " + obscde.Text + " " + nomneocp.Text);
+                            decs.Text + ".0" + "                      " + obscde.Text + " ");
 
                         // monte de 1 le toconf
                         int A = int.Parse(nametxt1.Text);
