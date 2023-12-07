@@ -506,7 +506,17 @@ namespace toconf_configurator
                     heureshoot.Text = part51 + ":" + part61;                    
                 }
 
-                
+                string contentAfterEighthPipe4 = parts[1].Trim();
+                // Découper la partie heure de shoot
+                if (contentAfterEighthPipe.Length >= 6)
+                {
+                    string part71 = contentAfterEighthPipe4.Substring(0, 7).Replace(" ", "");
+
+
+                    //rentre la valeur d'heure de shoot
+                    nameneocp.Text = part71;
+                }
+
             }
             
         }
@@ -522,8 +532,9 @@ namespace toconf_configurator
         // ajoute ce qui est dans les différentes lignes dans la liste d'objets a confirmer dans la nuit et incrémente le numéro de cible
         private void ajoutlist_Click(object sender, EventArgs e)
         {
-            
-            string ligneTexte1 = heureshoot.Text + "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+            string nomNeocp = string.IsNullOrWhiteSpace(nameneocp.Text) ? ciblename.Text + numnom.Text : nameneocp.Text;
+
+            string ligneTexte1 = heureshoot.Text + "     " + nomNeocp + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
                                 adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                                 decs.Text + ".0" + "                      " + obscde.Text + " ";
 
