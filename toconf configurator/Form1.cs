@@ -458,67 +458,75 @@ namespace toconf_configurator
         private void transf_Click_1(object sender, EventArgs e)
         
         {
-            int lineNumber = richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart);
-            string selectedLine = richTextBox1.Lines[lineNumber];
-            textBox1.Text = selectedLine;
-
-            string[] parts = selectedLine.Split('|');
-            if (parts.Length >= 9)
+            try
             {
-                string contentAfterEighthPipe = parts[8].Trim();
-                // Découper la partie AD
-                if (contentAfterEighthPipe.Length >= 6)
+                int lineNumber = richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart);
+                string selectedLine = richTextBox1.Lines[lineNumber];
+                textBox1.Text = selectedLine;
+
+                string[] parts = selectedLine.Split('|');
+                if (parts.Length >= 9)
                 {
-                    string part1 = contentAfterEighthPipe.Substring(0, 2).Replace(" ", "");
-                    string part2 = contentAfterEighthPipe.Substring(2, 3).Replace(" ", "");
-                    string part3 = contentAfterEighthPipe.Substring(5, 3).Replace(" ", "");
+                    string contentAfterEighthPipe = parts[8].Trim();
+                    // Découper la partie AD
+                    if (contentAfterEighthPipe.Length >= 6)
+                    {
+                        string part1 = contentAfterEighthPipe.Substring(0, 2).Replace(" ", "");
+                        string part2 = contentAfterEighthPipe.Substring(2, 3).Replace(" ", "");
+                        string part3 = contentAfterEighthPipe.Substring(5, 3).Replace(" ", "");
 
-                    //rentre les valeurs en AD
-                    adh.Text = part1;
-                    adm.Text = part2;
-                    ads.Text = part3;
+                        //rentre les valeurs en AD
+                        adh.Text = part1;
+                        adm.Text = part2;
+                        ads.Text = part3;
+                    }
+
+                    string contentAfterEighthPipe1 = parts[9].Trim();
+                    // Découper la partie DEC
+                    if (contentAfterEighthPipe.Length >= 6)
+                    {
+                        string part11 = contentAfterEighthPipe1.Substring(0, 1).Replace(" ", "");
+                        string part21 = contentAfterEighthPipe1.Substring(1, 3).Replace(" ", "");
+                        string part31 = contentAfterEighthPipe1.Substring(4, 3).Replace(" ", "");
+                        string part41 = contentAfterEighthPipe1.Substring(6, 3).Replace(" ", "");
+
+                        //rentre les valeurs en DEC
+                        decpm.Text = part11;
+                        dech.Text = part21;
+                        decm.Text = part31;
+                        decs.Text = part41;
+                    }
+
+                    string contentAfterEighthPipe2 = parts[3].Trim();
+                    // Découper la partie heure de shoot
+                    if (contentAfterEighthPipe.Length >= 6)
+                    {
+                        string part51 = contentAfterEighthPipe2.Substring(0, 2).Replace(" ", "");
+                        string part61 = contentAfterEighthPipe2.Substring(2, 2).Replace(" ", "");
+
+                        //rentre la valeur d'heure de shoot
+                        heureshoot.Text = part51 + ":" + part61;
+                    }
+
+                    string contentAfterEighthPipe4 = parts[1].Trim();
+                    // Découper la partie heure de shoot
+                    if (contentAfterEighthPipe.Length >= 6)
+                    {
+                        string part71 = contentAfterEighthPipe4.Substring(0, 7).Replace(" ", "");
+
+
+                        //rentre la valeur d'heure de shoot
+                        nameneocp.Text = part71;
+
+                    }
+
                 }
-
-                string contentAfterEighthPipe1 = parts[9].Trim();
-                // Découper la partie DEC
-                if (contentAfterEighthPipe.Length >= 6)
-                {
-                    string part11 = contentAfterEighthPipe1.Substring(0, 1).Replace(" ", "");
-                    string part21 = contentAfterEighthPipe1.Substring(1, 3).Replace(" ", "");
-                    string part31 = contentAfterEighthPipe1.Substring(4, 3).Replace(" ", "");
-                    string part41 = contentAfterEighthPipe1.Substring(6, 3).Replace(" ", "");
-
-                    //rentre les valeurs en DEC
-                    decpm.Text = part11;
-                    dech.Text = part21;
-                    decm.Text = part31;
-                    decs.Text = part41;
-                }
-
-                string contentAfterEighthPipe2 = parts[3].Trim();
-                // Découper la partie heure de shoot
-                if (contentAfterEighthPipe.Length >= 6)
-                {
-                    string part51 = contentAfterEighthPipe2.Substring(0, 2).Replace(" ", "");
-                    string part61 = contentAfterEighthPipe2.Substring(2, 2).Replace(" ", "");
-
-                    //rentre la valeur d'heure de shoot
-                    heureshoot.Text = part51 + ":" + part61;                    
-                }
-
-                string contentAfterEighthPipe4 = parts[1].Trim();
-                // Découper la partie heure de shoot
-                if (contentAfterEighthPipe.Length >= 6)
-                {
-                    string part71 = contentAfterEighthPipe4.Substring(0, 7).Replace(" ", "");
-
-
-                    //rentre la valeur d'heure de shoot
-                    nameneocp.Text = part71;
-                }
-
             }
-            
+            catch (Exception ex)
+            {
+                // Gérer l'exception - vous pouvez la journaliser, afficher un message à l'utilisateur, etc.
+                MessageBox.Show("Veuillez sélectionner une ligne à charger.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         //calcul l'heure TU et la rentre dans un textbox
@@ -532,6 +540,7 @@ namespace toconf_configurator
         // ajoute ce qui est dans les différentes lignes dans la liste d'objets a confirmer dans la nuit et incrémente le numéro de cible
         private void ajoutlist_Click(object sender, EventArgs e)
         {
+
             string nomNeocp = string.IsNullOrWhiteSpace(nameneocp.Text) ? ciblename.Text + numnom.Text : nameneocp.Text;
 
             string ligneTexte1 = heureshoot.Text + "     " + nomNeocp + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
@@ -544,6 +553,7 @@ namespace toconf_configurator
             int BB = int.Parse(label11.Text);
             int CC = AA + BB;
             numnom.Text = CC.ToString("D2");
+                        
 
         }
 
