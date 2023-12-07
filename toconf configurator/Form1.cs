@@ -659,7 +659,7 @@ namespace toconf_configurator
             if (checkBox1.Checked)
             {
                 Console.WriteLine("Timer Start");
-                MessageBox.Show("VOUS VENEZ DE LANCER LE MODE AUTOMATIQUE NE PLUS RIEN TOUCHER SANS L'ARRETER.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("VOUS VENEZ DE LANCER LE MODE AUTOMATIQUE\n  NE PLUS RIEN TOUCHER SANS L'ARRETER AVANT", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
