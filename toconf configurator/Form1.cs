@@ -522,7 +522,7 @@ namespace toconf_configurator
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Gérer l'exception - vous pouvez la journaliser, afficher un message à l'utilisateur, etc.
                 MessageBox.Show("Veuillez sélectionner une ligne à charger.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -552,8 +552,7 @@ namespace toconf_configurator
             int AA = int.Parse(numnom.Text);
             int BB = int.Parse(label11.Text);
             int CC = AA + BB;
-            numnom.Text = CC.ToString("D2");
-                        
+            numnom.Text = CC.ToString("D2");                    
 
         }
 
@@ -650,16 +649,20 @@ namespace toconf_configurator
         // Controle les entrée dans la list box de confirmation et déclenche le transfere pour activer le mode automatique 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
+            // Si l'état de la case à cocher n'a pas changé, ne faites rien
+            if (checkBox1.Checked == timer2.Enabled)
+                return;
+
             // Si la case à cocher est cochée, démarrez le timer, sinon arrêtez-le
             timer2.Enabled = checkBox1.Checked;
+
             if (checkBox1.Checked)
             {
-
                 Console.WriteLine("Timer Start");
+                MessageBox.Show("VOUS VENEZ DE LANCER LE MODE AUTOMATIQUE NE PLUS RIEN TOUCHER SANS L'ARRETER.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-
                 Console.WriteLine("Timer Stop");
             }
         }
