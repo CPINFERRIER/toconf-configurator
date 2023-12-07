@@ -679,7 +679,7 @@ namespace toconf_configurator
             {
                 // Mettez à jour l'index du dernier élément
                 int lastIndex = currentCount - 1;
-                Console.WriteLine(texttime.Text);
+                Console.WriteLine(texttime.Text + "  TU");
                 // Votre logique de vérification ici
                 // Assurez-vous que currentIndex reste dans la plage valide
                 if (currentIndex >= 0 && currentIndex <= lastIndex)
