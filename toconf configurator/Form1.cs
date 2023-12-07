@@ -618,7 +618,7 @@ namespace toconf_configurator
             }
         }
 
-        // Controle les entrée dans la list box de confirmation et déclenche le transfere
+        // Controle les entrée dans la list box de confirmation et déclenche le transfere pour activer le mode automatique 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             // Si la case à cocher est cochée, démarrez le timer, sinon arrêtez-le
@@ -635,6 +635,8 @@ namespace toconf_configurator
             }
         }
 
+
+        //mode automatique
         private void VerificationListBox()
         {
             Console.WriteLine("Verification list box actif");
@@ -704,11 +706,11 @@ namespace toconf_configurator
                             adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
                             decs.Text + ".0" + "                      " + obscde.Text + " ");
 
-                            // monte de 1 le toconf
-                            int A = int.Parse(nametxt1.Text);
-                            int B = int.Parse(label11.Text);
-                            int C = A + B;
-                            nametxt1.Text = C.ToString("D2");
+                        // monte de 1 le toconf
+                        int A = int.Parse(nametxt1.Text);
+                        int B = int.Parse(label11.Text);
+                        int C = A + B;
+                        nametxt1.Text = C.ToString("D2");
 
 
                             //supprime la ligne aprés génération fichier
@@ -754,6 +756,7 @@ namespace toconf_configurator
             }
         }
 
+        //timer du mode automatique
         private void timer2_Tick(object sender, EventArgs e)
         {
             VerificationListBox();
