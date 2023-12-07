@@ -94,6 +94,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.supline1 = new System.Windows.Forms.Button();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -617,6 +619,10 @@
             this.texttime.TabIndex = 51;
             this.texttime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            // 
             // heureshoot
             // 
             this.heureshoot.Location = new System.Drawing.Point(164, 168);
@@ -733,11 +739,26 @@
             this.supline1.UseVisualStyleBackColor = true;
             this.supline1.Click += new System.EventHandler(this.supline1_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 10000;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(659, 474);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 63;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 755);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.supline1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label15);
@@ -872,6 +893,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button supline1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

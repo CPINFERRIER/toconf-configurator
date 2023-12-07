@@ -19,19 +19,34 @@ namespace toconf_configurator
 {
     public partial class Form1 : Form
     {
+               
+        private int currentIndex = 0;
         
-
+        
         public Form1()
         {
             InitializeComponent();
-            timer1.Interval = 500; // Interval en millisecondes (1 seconde)
+            Console.WriteLine("Formulaire initialisé");
+            timer1.Interval = 500; // Interval en millisecondes du timer 1 (0,5 seconde)
+            timer2.Interval = 2000; // Durée du timer 2 en millisecondes (10 secondes)
             timer1.Tick += Timer1_Tick; // Associe l'événement Tick à la méthode Timer1_Tick
+            timer2.Tick += timer2_Tick; // Associe l'événement Tick à la méthode Timer1_Tick
             timer1.Start(); // Démarre le minuteur
+            
+            // Abonnez-vous à l'événement CheckedChanged de la case à cocher
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
+                        
+            if (checkBox1.Checked)
+            {
+                timer2.Enabled = true;
+            }
+
         }
 
-        // executer au chargement du programme
-        private void Form1_Load(object sender, EventArgs e)
+    // executer au chargement du programme
+    private void Form1_Load(object sender, EventArgs e)
         {
+            Console.WriteLine("Form Loaded");
             // Pour loader les paramètres
             string mfileName = "toconf.tcf";
             if (File.Exists(mfileName))
@@ -489,10 +504,11 @@ namespace toconf_configurator
                     heureshoot.Text = part51 + ":" + part61;                    
                 }
             }
+            
         }
 
         //calcul l'heure TU et la rentre dans un textbox
-        private void Timer1_Tick(object sender, EventArgs e)
+        public void Timer1_Tick(object sender, EventArgs e)
         {
             DateTime heureTU = DateTime.UtcNow;
             string heureFormattee = heureTU.ToString("HH:mm");
@@ -601,6 +617,151 @@ namespace toconf_configurator
                 MessageBox.Show("Veuillez sélectionner une ligne à supprimer.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        // Controle les entrée dans la list box de confirmation et déclenche le transfere
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            // Si la case à cocher est cochée, démarrez le timer, sinon arrêtez-le
+            timer2.Enabled = checkBox1.Checked;
+            if (checkBox1.Checked)
+            {
+
+                Console.WriteLine("Timer Start");
+            }
+            else
+            {
+
+                Console.WriteLine("Timer Stop");
+            }
+        }
+
+        private void VerificationListBox()
+        {
+            Console.WriteLine("Verification list box actif");
+            int currentCount = listeconfirm.Items.Count;
+
+            // Si le nombre d'éléments dans la ListBox a changé
+            if (currentCount > 0)
+            {
+                // Mettez à jour l'index du dernier élément
+                int lastIndex = currentCount - 1;
+                Console.WriteLine(texttime.Text);
+                // Votre logique de vérification ici
+                // Assurez-vous que currentIndex reste dans la plage valide
+                if (currentIndex >= 0 && currentIndex <= lastIndex)
+                {
+                    // Votre logique de vérification ici
+                    string premierePartie = (listeconfirm.Items[currentIndex].ToString().Length >= 5)
+                        ? listeconfirm.Items[currentIndex].ToString().Substring(0, 5)
+                        : listeconfirm.Items[currentIndex].ToString();
+
+                    if (premierePartie == texttime.Text)
+                    
+                {
+                    // Sélectionnez la ligne correspondante dans la ListBox
+                    listeconfirm.SelectedIndex = currentIndex;
+
+                    // La partie spécifiée de la ligne correspond à l'heure recherchée
+                    // Ajoutez ici le code que vous souhaitez exécuter en cas de correspondance
+                    if (listeconfirm.SelectedIndex >= 0) // Vérifier si une ligne est sélectionnée
+                    {
+                        string selectedLine = listeconfirm.SelectedItem.ToString();
+                        string[] param = selectedLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                        heureshoot.Text = param[0];
+                        string nomcible = param[1]; // CHM1003
+                        string ciblenameValue = nomcible.Substring(0, 5); // CHM10
+                        string numnomValue = nomcible.Substring(5); // 03
+                        ciblename.Text = ciblenameValue;
+                        numnom.Text = numnomValue;
+                        string year1 = param[2];
+                        string yearok = year1.Substring(2);
+                        year.Text = yearok;
+                        day.Text = param[3];
+                        string mount1 = param[4];
+                        string mountok = mount1.Substring(0, 2);
+                        mount.Text = mountok;
+                        adh.Text = param[5];
+                        adm.Text = param[6];
+                        string ads1 = param[7];
+                        string adsok = ads1.Substring(0, 2);
+                        ads.Text = adsok;
+                        string dech1 = param[8];
+                        string decpmok = dech1.Substring(0, 1);
+                        string dechok = dech1.Substring(1, 2);
+                        decpm.Text = decpmok;
+                        dech.Text = dechok;
+                        decm.Text = param[9];
+                        string decs1 = param[10];
+                        string decsok = decs1.Substring(0, 2);
+                        decs.Text = decsok;
+                        obscde.Text = param[11];
+                                                   
+
+                        //génére le fichier toconf
+                        string fileName = nametxt.Text + nametxt1.Text + ".txt";
+                        File.WriteAllText(empl.Text + fileName, "     " + ciblename.Text + numnom.Text + " KC" + year.Text + " " + day.Text + " " + mount.Text + ".00000" + " " +
+                            adh.Text + " " + adm.Text + " " + ads.Text + ".00" + " " + decpm.Text + dech.Text + " " + decm.Text + " " +
+                            decs.Text + ".0" + "                      " + obscde.Text + " ");
+
+                            // monte de 1 le toconf
+                            int A = int.Parse(nametxt1.Text);
+                            int B = int.Parse(label11.Text);
+                            int C = A + B;
+                            nametxt1.Text = C.ToString("D2");
+
+
+                            //supprime la ligne aprés génération fichier
+                            if (listeconfirm.SelectedIndex != -1)
+                        {
+                            // Supprimez l'élément sélectionné de la ListBox
+                            listeconfirm.Items.RemoveAt(listeconfirm.SelectedIndex);
+                        }
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Veuillez sélectionner une ligne à charger.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+
+
+                    //Console.WriteLine("Correspondance trouvée pour l'heure : " + texttime.Text);
+
+
+                }
+
+                }
+                else
+                {
+                    // Gérez le cas où currentIndex est en dehors de la plage valide
+                    // Cela peut inclure la réinitialisation de currentIndex à 0, par exemple
+                    currentIndex = 0;
+                }
+
+                // Passez à l'élément suivant
+                currentIndex++;
+
+                // Si on atteint le dernier élément, réinitialisez l'index pour revenir en haut
+                if (currentIndex > lastIndex)
+                {
+                    currentIndex = 0;
+                }
+            }
+            else
+            {
+                // Si la première partie ne correspond pas, réinitialisez l'index
+                currentIndex = 0;
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            VerificationListBox();
+            // Ajoutez un message de débogage
+            Console.WriteLine("Timer2 Tick Actif");
+        }
+
+
     }
 }
 
