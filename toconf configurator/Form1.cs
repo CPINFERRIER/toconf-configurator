@@ -289,6 +289,8 @@ namespace toconf_configurator
         {
             nametxt1.Text = "01";
             numnom.Text = "01";
+            ciblename.Text = "CHM10";
+            numnom.Text = "01";
         }
 
         // bouton + qui incrémente la valeur AD de -XX
