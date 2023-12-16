@@ -74,7 +74,6 @@
             this.genfiupall = new System.Windows.Forms.Button();
             this.resad = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.chargefichneocp = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.emplregister = new System.Windows.Forms.Button();
             this.chargefich2neo = new System.Windows.Forms.Button();
@@ -98,9 +97,14 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.nameneocp = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.listneocpfait = new System.Windows.Forms.ListBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chargefichneocp = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -310,7 +314,7 @@
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(703, 723);
+            this.exit.Location = new System.Drawing.Point(721, 778);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(101, 23);
             this.exit.TabIndex = 20;
@@ -547,16 +551,6 @@
             this.richTextBox1.TabIndex = 45;
             this.richTextBox1.Text = "";
             // 
-            // chargefichneocp
-            // 
-            this.chargefichneocp.Location = new System.Drawing.Point(31, 531);
-            this.chargefichneocp.Name = "chargefichneocp";
-            this.chargefichneocp.Size = new System.Drawing.Size(258, 23);
-            this.chargefichneocp.TabIndex = 46;
-            this.chargefichneocp.Text = "Génére et charge fichier NEOCP \\ PCCP";
-            this.chargefichneocp.UseVisualStyleBackColor = true;
-            this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.genfi);
@@ -584,9 +578,9 @@
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(326, 531);
+            this.chargefich2neo.Location = new System.Drawing.Point(55, 557);
             this.chargefich2neo.Name = "chargefich2neo";
-            this.chargefich2neo.Size = new System.Drawing.Size(258, 23);
+            this.chargefich2neo.Size = new System.Drawing.Size(209, 23);
             this.chargefich2neo.TabIndex = 48;
             this.chargefich2neo.Text = "Charge fichier NEOCP \\ PCCP";
             this.chargefich2neo.UseVisualStyleBackColor = true;
@@ -602,7 +596,7 @@
             // 
             // transf
             // 
-            this.transf.Location = new System.Drawing.Point(596, 397);
+            this.transf.Location = new System.Drawing.Point(345, 533);
             this.transf.Name = "transf";
             this.transf.Size = new System.Drawing.Size(209, 47);
             this.transf.TabIndex = 50;
@@ -628,7 +622,7 @@
             // heureshoot
             // 
             this.heureshoot.Location = new System.Drawing.Point(164, 168);
-            this.heureshoot.MaxLength = 3;
+            this.heureshoot.MaxLength = 5;
             this.heureshoot.Name = "heureshoot";
             this.heureshoot.Size = new System.Drawing.Size(63, 20);
             this.heureshoot.TabIndex = 52;
@@ -658,15 +652,15 @@
             // listeconfirm
             // 
             this.listeconfirm.FormattingEnabled = true;
-            this.listeconfirm.Location = new System.Drawing.Point(30, 587);
+            this.listeconfirm.Location = new System.Drawing.Point(6, 35);
             this.listeconfirm.Name = "listeconfirm";
-            this.listeconfirm.Size = new System.Drawing.Size(553, 108);
+            this.listeconfirm.Size = new System.Drawing.Size(434, 108);
             this.listeconfirm.TabIndex = 55;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 571);
+            this.label14.Location = new System.Drawing.Point(4, 19);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(165, 13);
             this.label14.TabIndex = 56;
@@ -674,7 +668,7 @@
             // 
             // ajoutlist
             // 
-            this.ajoutlist.Location = new System.Drawing.Point(627, 588);
+            this.ajoutlist.Location = new System.Drawing.Point(456, 35);
             this.ajoutlist.Name = "ajoutlist";
             this.ajoutlist.Size = new System.Drawing.Size(144, 23);
             this.ajoutlist.TabIndex = 57;
@@ -684,7 +678,7 @@
             // 
             // chargvaleur
             // 
-            this.chargvaleur.Location = new System.Drawing.Point(627, 617);
+            this.chargvaleur.Location = new System.Drawing.Point(456, 64);
             this.chargvaleur.Name = "chargvaleur";
             this.chargvaleur.Size = new System.Drawing.Size(144, 24);
             this.chargvaleur.TabIndex = 58;
@@ -694,7 +688,7 @@
             // 
             // supline
             // 
-            this.supline.Location = new System.Drawing.Point(627, 647);
+            this.supline.Location = new System.Drawing.Point(456, 94);
             this.supline.Name = "supline";
             this.supline.Size = new System.Drawing.Size(144, 24);
             this.supline.TabIndex = 59;
@@ -733,7 +727,7 @@
             // 
             // supline1
             // 
-            this.supline1.Location = new System.Drawing.Point(627, 677);
+            this.supline1.Location = new System.Drawing.Point(456, 124);
             this.supline1.Name = "supline1";
             this.supline1.Size = new System.Drawing.Size(144, 23);
             this.supline1.TabIndex = 62;
@@ -748,7 +742,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(31, 701);
+            this.checkBox1.Location = new System.Drawing.Point(6, 149);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(178, 17);
             this.checkBox1.TabIndex = 63;
@@ -774,22 +768,61 @@
             this.label16.TabIndex = 65;
             this.label16.Text = "Nom neocp";
             // 
+            // listneocpfait
+            // 
+            this.listneocpfait.FormattingEnabled = true;
+            this.listneocpfait.Location = new System.Drawing.Point(636, 35);
+            this.listneocpfait.Name = "listneocpfait";
+            this.listneocpfait.Size = new System.Drawing.Size(132, 108);
+            this.listneocpfait.TabIndex = 66;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(634, 19);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 13);
+            this.label17.TabIndex = 67;
+            this.label17.Text = "Déjà confirmer";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.listeconfirm);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.listneocpfait);
+            this.groupBox3.Controls.Add(this.ajoutlist);
+            this.groupBox3.Controls.Add(this.chargvaleur);
+            this.groupBox3.Controls.Add(this.supline);
+            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.supline1);
+            this.groupBox3.Location = new System.Drawing.Point(31, 598);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(773, 174);
+            this.groupBox3.TabIndex = 68;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fonctions Automatique";
+            // 
+            // chargefichneocp
+            // 
+            this.chargefichneocp.Location = new System.Drawing.Point(55, 533);
+            this.chargefichneocp.Name = "chargefichneocp";
+            this.chargefichneocp.Size = new System.Drawing.Size(209, 23);
+            this.chargefichneocp.TabIndex = 46;
+            this.chargefichneocp.Text = "Génére et charge fichier NEOCP \\ PCCP";
+            this.chargefichneocp.UseVisualStyleBackColor = true;
+            this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 755);
+            this.ClientSize = new System.Drawing.Size(834, 811);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.nameneocp);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.supline1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.supline);
-            this.Controls.Add(this.chargvaleur);
-            this.Controls.Add(this.ajoutlist);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.listeconfirm);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.heureshoot);
             this.Controls.Add(this.heurshoo);
@@ -845,6 +878,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -897,7 +932,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button resad;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button chargefichneocp;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button emplregister;
         private System.Windows.Forms.Button chargefich2neo;
@@ -920,6 +954,10 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox nameneocp;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListBox listneocpfait;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button chargefichneocp;
     }
 }
 

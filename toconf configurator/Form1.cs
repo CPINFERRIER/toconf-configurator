@@ -49,6 +49,10 @@ namespace toconf_configurator
             Console.WriteLine("Form Loaded");
             // Pour loader les paramètres
             string mfileName = "toconf.tcf";
+
+            // Centrer le formulaire sur l'écran
+            CenterToScreen();
+
             if (File.Exists(mfileName))
             {
                 using (var file = new StreamReader(mfileName))
@@ -78,7 +82,7 @@ namespace toconf_configurator
            
         }
 
-        // bouton quitter le programme
+        // début bouton quitter le programme IMPORTANT
         private void exit_Click(object sender, EventArgs e)
         {
             // Pour enregistrer les paramétres
@@ -117,8 +121,50 @@ namespace toconf_configurator
                 }
             }
             // Pour quitter le programme
-            Application.Exit();
+            
+            // Afficher une boîte de dialogue de confirmation
+            DialogResult result = MessageBox.Show("Voulez-vous vraiment quitter l'application ?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            // Vérifier la réponse de l'utilisateur
+            if (result == DialogResult.OK)
+            {
+                // Enregistrer le contenu de listneocpfait dans un fichier texte
+                SaveListneocpfaitToFile();
+                // L'utilisateur a appuyé sur le bouton OK, donc quitter l'application
+                Application.Exit();
+            }
+            // Si l'utilisateur a appuyé sur le bouton Annuler, ne rien faire
         }
+
+        //enregidtre la liste dans un fichier texte quand on quitte
+        private void SaveListneocpfaitToFile()
+        {
+            try
+            {
+                // Générer le nom du fichier basé sur la date du jour
+                string fileName = "neocpfait_" + DateTime.Now.ToString("yyyyMMdd") + ".txt";
+
+                // Chemin complet du fichier
+                string filePath = Path.Combine(Application.StartupPath, fileName);
+
+                // Écrire le contenu de listneocpfait dans le fichier
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (var item in listneocpfait.Items)
+                    {
+                        writer.WriteLine(item.ToString());
+                    }
+                }
+                                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'enregistrement du fichier : " + ex.Message, "Erreur d'enregistrement", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // fin bouton quitter le programme IMPORTANT
+
 
         //bouton qui génére le fichier texte
         private void genfi_Click(object sender, EventArgs e)
@@ -423,6 +469,7 @@ namespace toconf_configurator
                 string contenuFichier = File.ReadAllText(cheminFichier);
 
                 richTextBox1.Text = contenuFichier;
+
             }
         }
 
@@ -451,6 +498,7 @@ namespace toconf_configurator
                 string contenuFichier = File.ReadAllText(cheminFichier);
 
                 richTextBox1.Text = contenuFichier;
+
             }
         }
 
@@ -527,6 +575,11 @@ namespace toconf_configurator
                 // Gérer l'exception - vous pouvez la journaliser, afficher un message à l'utilisateur, etc.
                 MessageBox.Show("Veuillez sélectionner une ligne à charger.", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
+            
+
+
         }
 
         //calcul l'heure TU et la rentre dans un textbox
@@ -746,6 +799,9 @@ namespace toconf_configurator
                         int C = A + B;
                         nametxt1.Text = C.ToString("D2");
 
+                        // ajoute la cible effectuer dans la liste box fait pour sauvegarder cela visuellement
+                        listneocpfait.Items.Add(ciblename.Text + numnom.Text + "  " + heureshoot.Text); // Ajoute la ligne à la ListBox
+
 
                             //supprime la ligne aprés génération fichier
                             if (listeconfirm.SelectedIndex != -1)
@@ -797,8 +853,7 @@ namespace toconf_configurator
             // Ajoutez un message de débogage
             Console.WriteLine("Timer2 Tick Actif");
         }
-
-
+        
     }
 }
 
