@@ -344,7 +344,9 @@
             // nametxt
             // 
             this.nametxt.Location = new System.Drawing.Point(164, 220);
+            this.nametxt.MaxLength = 6;
             this.nametxt.Name = "nametxt";
+            this.nametxt.ReadOnly = true;
             this.nametxt.Size = new System.Drawing.Size(63, 20);
             this.nametxt.TabIndex = 13;
             this.nametxt.Text = "toconf";
@@ -371,6 +373,7 @@
             // nametxt1
             // 
             this.nametxt1.Location = new System.Drawing.Point(233, 220);
+            this.nametxt1.MaxLength = 2;
             this.nametxt1.Name = "nametxt1";
             this.nametxt1.Size = new System.Drawing.Size(31, 20);
             this.nametxt1.TabIndex = 14;
@@ -633,9 +636,9 @@
             this.heurshoo.AutoSize = true;
             this.heurshoo.Location = new System.Drawing.Point(80, 171);
             this.heurshoo.Name = "heurshoo";
-            this.heurshoo.Size = new System.Drawing.Size(65, 13);
+            this.heurshoo.Size = new System.Drawing.Size(83, 13);
             this.heurshoo.TabIndex = 53;
-            this.heurshoo.Text = "Heure shoot";
+            this.heurshoo.Text = "Heure shoot TU";
             // 
             // textBox2
             // 
