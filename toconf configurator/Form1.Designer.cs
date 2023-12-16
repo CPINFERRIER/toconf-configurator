@@ -90,7 +90,6 @@
             this.chargvaleur = new System.Windows.Forms.Button();
             this.supline = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.supline1 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -101,10 +100,12 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chargefichneocp = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -548,7 +549,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(31, 333);
+            this.richTextBox1.Location = new System.Drawing.Point(7, 19);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(554, 192);
             this.richTextBox1.TabIndex = 45;
@@ -581,7 +582,7 @@
             // 
             // chargefich2neo
             // 
-            this.chargefich2neo.Location = new System.Drawing.Point(55, 557);
+            this.chargefich2neo.Location = new System.Drawing.Point(31, 243);
             this.chargefich2neo.Name = "chargefich2neo";
             this.chargefich2neo.Size = new System.Drawing.Size(209, 23);
             this.chargefich2neo.TabIndex = 48;
@@ -591,7 +592,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 280);
+            this.textBox1.Location = new System.Drawing.Point(31, 781);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(554, 20);
@@ -599,7 +600,7 @@
             // 
             // transf
             // 
-            this.transf.Location = new System.Drawing.Point(345, 533);
+            this.transf.Location = new System.Drawing.Point(321, 219);
             this.transf.Name = "transf";
             this.transf.Size = new System.Drawing.Size(209, 47);
             this.transf.TabIndex = 50;
@@ -611,7 +612,7 @@
             // 
             this.texttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.texttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttime.Location = new System.Drawing.Point(607, 333);
+            this.texttime.Location = new System.Drawing.Point(577, 19);
             this.texttime.Name = "texttime";
             this.texttime.ReadOnly = true;
             this.texttime.Size = new System.Drawing.Size(132, 47);
@@ -644,7 +645,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(734, 333);
+            this.textBox2.Location = new System.Drawing.Point(704, 19);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(58, 47);
@@ -707,15 +708,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(62, 62);
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 317);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 13);
-            this.label15.TabIndex = 60;
-            this.label15.Text = "Liste d\'objets neocp et pccp";
             // 
             // groupBox2
             // 
@@ -799,7 +791,7 @@
             this.groupBox3.Controls.Add(this.supline);
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.supline1);
-            this.groupBox3.Location = new System.Drawing.Point(31, 598);
+            this.groupBox3.Location = new System.Drawing.Point(31, 576);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(773, 174);
             this.groupBox3.TabIndex = 68;
@@ -808,7 +800,7 @@
             // 
             // chargefichneocp
             // 
-            this.chargefichneocp.Location = new System.Drawing.Point(55, 533);
+            this.chargefichneocp.Location = new System.Drawing.Point(31, 219);
             this.chargefichneocp.Name = "chargefichneocp";
             this.chargefichneocp.Size = new System.Drawing.Size(209, 23);
             this.chargefichneocp.TabIndex = 46;
@@ -816,26 +808,35 @@
             this.chargefichneocp.UseVisualStyleBackColor = true;
             this.chargefichneocp.Click += new System.EventHandler(this.chargefichneocp_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.transf);
+            this.groupBox4.Controls.Add(this.richTextBox1);
+            this.groupBox4.Controls.Add(this.chargefichneocp);
+            this.groupBox4.Controls.Add(this.chargefich2neo);
+            this.groupBox4.Controls.Add(this.texttime);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Location = new System.Drawing.Point(31, 284);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(773, 273);
+            this.groupBox4.TabIndex = 69;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Liste d\'objets neocp et pccp";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 811);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.nameneocp);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.heureshoot);
             this.Controls.Add(this.heurshoo);
-            this.Controls.Add(this.texttime);
-            this.Controls.Add(this.transf);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.chargefich2neo);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.chargefichneocp);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.resad);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label13);
@@ -883,6 +884,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -950,7 +953,6 @@
         private System.Windows.Forms.Button ajoutlist;
         private System.Windows.Forms.Button chargvaleur;
         private System.Windows.Forms.Button supline;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button supline1;
         private System.Windows.Forms.Timer timer2;
@@ -961,6 +963,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button chargefichneocp;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

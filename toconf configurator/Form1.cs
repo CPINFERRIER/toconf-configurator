@@ -712,11 +712,13 @@ namespace toconf_configurator
             if (checkBox1.Checked)
             {
                 Console.WriteLine("Timer Start");
+                groupBox3.BackColor = Color.FromArgb(255, 128, 128);
                 MessageBox.Show("VOUS VENEZ DE LANCER LE MODE AUTOMATIQUE\n  NE PLUS RIEN TOUCHER SANS L'ARRETER AVANT", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 Console.WriteLine("Timer Stop");
+                groupBox3.BackColor = SystemColors.Control;
             }
         }
 
@@ -724,6 +726,7 @@ namespace toconf_configurator
         //mode automatique
         private void VerificationListBox()
         {
+            
             Console.WriteLine("Verification list box actif");
             int currentCount = listeconfirm.Items.Count;
 
