@@ -52,10 +52,10 @@
     <OutputPath>bin\toconf configurator\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>37F7BA6435663786C0A215B788390791A046AEB3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>70B30EADBC46F9184986CBA1594AFCF6FEB42D4E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>toconf configurator_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>toconf configurator_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -112,6 +112,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="toconf configurator_1_TemporaryKey.pfx" />
+    <None Include="toconf configurator_2_TemporaryKey.pfx" />
     <None Include="toconf configurator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
