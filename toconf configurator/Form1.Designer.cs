@@ -101,6 +101,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chargefichneocp = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rpaddecajoutlist = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -672,7 +673,7 @@
             // 
             // ajoutlist
             // 
-            this.ajoutlist.Location = new System.Drawing.Point(456, 35);
+            this.ajoutlist.Location = new System.Drawing.Point(459, 51);
             this.ajoutlist.Name = "ajoutlist";
             this.ajoutlist.Size = new System.Drawing.Size(144, 23);
             this.ajoutlist.TabIndex = 57;
@@ -682,7 +683,7 @@
             // 
             // chargvaleur
             // 
-            this.chargvaleur.Location = new System.Drawing.Point(456, 64);
+            this.chargvaleur.Location = new System.Drawing.Point(459, 80);
             this.chargvaleur.Name = "chargvaleur";
             this.chargvaleur.Size = new System.Drawing.Size(144, 24);
             this.chargvaleur.TabIndex = 58;
@@ -692,7 +693,7 @@
             // 
             // supline
             // 
-            this.supline.Location = new System.Drawing.Point(456, 94);
+            this.supline.Location = new System.Drawing.Point(459, 110);
             this.supline.Name = "supline";
             this.supline.Size = new System.Drawing.Size(144, 24);
             this.supline.TabIndex = 59;
@@ -722,7 +723,7 @@
             // 
             // supline1
             // 
-            this.supline1.Location = new System.Drawing.Point(456, 124);
+            this.supline1.Location = new System.Drawing.Point(459, 140);
             this.supline1.Name = "supline1";
             this.supline1.Size = new System.Drawing.Size(144, 23);
             this.supline1.TabIndex = 62;
@@ -782,6 +783,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.rpaddecajoutlist);
             this.groupBox3.Controls.Add(this.listeconfirm);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label14);
@@ -822,6 +824,16 @@
             this.groupBox4.TabIndex = 69;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Liste d\'objets neocp et pccp";
+            // 
+            // rpaddecajoutlist
+            // 
+            this.rpaddecajoutlist.Location = new System.Drawing.Point(459, 11);
+            this.rpaddecajoutlist.Name = "rpaddecajoutlist";
+            this.rpaddecajoutlist.Size = new System.Drawing.Size(144, 34);
+            this.rpaddecajoutlist.TabIndex = 68;
+            this.rpaddecajoutlist.Text = "Remplir AD/DEC + ajouter ligne dans la liste";
+            this.rpaddecajoutlist.UseVisualStyleBackColor = true;
+            this.rpaddecajoutlist.Click += new System.EventHandler(this.rpaddecajoutlist_Click);
             // 
             // Form1
             // 
@@ -964,6 +976,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button chargefichneocp;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button rpaddecajoutlist;
     }
 }
 
